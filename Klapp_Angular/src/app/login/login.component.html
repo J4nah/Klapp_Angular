@@ -1,12 +1,16 @@
 <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
-    <div>
-      <label for="username">Usuário:</label>
-      <input type="text" id="username" name="username" ngModel required>
-    </div>
-    <div>
-      <label for="password">Senha:</label>
-      <input type="password" id="password" name="password" ngModel required>
-    </div>
-    <button type="submit">Entrar</button>
-  </form>
-  
+  <h1>Olá, vamos começar?</h1>
+  <div>
+    <input type="text" id="username" name="username" ngModel required placeholder="Entre com seu e-mail">
+  </div>
+  <div>
+    <input type="password" id="password" name="password" ngModel required placeholder="Senha">
+  </div>
+
+<div>
+  <input type="checkbox" id="rememberMe" name="rememberMe" ngModel>
+  <label for="rememberMe">Manter conectado</label>
+
+</div>
+  <button type="submit">Entrar</button>
+</form>

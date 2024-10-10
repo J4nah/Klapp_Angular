@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent {
   onSubmit(form: NgForm) {
-    console.log('Form Submitted!', form.value);
+    console.log('Form Submitted!', form.value); // Verifica se os dados estão sendo logados
     // Aqui você pode adicionar a lógica de autenticação
   }
 }
