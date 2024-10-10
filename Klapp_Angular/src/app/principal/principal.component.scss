@@ -1,0 +1,23 @@
+.background-container {
+    background-image: url('/assets/images/background1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    height: 129vh;
+    width: 100%;
+    position: relative; /* Define o contêiner como referência para o pos. absoluto */
+}
+
+.estudante-container {
+    position: absolute; /* Para posicionar em relação ao contêiner pai */
+    margin-top: 168px; /* Ajusta para a posição desejada */
+    margin-left: 120px;
+    margin-right: 728px;
+    margin-bottom: 0;
+}
+
+.student-image {
+    width: 592px; /* Largura fixa */
+    height: 685px; /* Altura fixa */
+    object-fit: cover; /* Para garantir que a imagem preencha a área, mantendo a proporção */
+}
