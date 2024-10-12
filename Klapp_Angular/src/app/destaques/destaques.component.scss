@@ -1,0 +1,29 @@
+.text-image-container {
+    padding-top: 106px;
+    width: 1201px;
+    height: 323px;
+    display: flex;
+    align-items: center; 
+    gap: 69px; 
+    margin: 0 auto;
+}
+
+.text-image-container h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #191D6B;
+
+}
+.text-image-container p {
+    width: 618px;
+    height: 243px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #878787;
+}
+
+.text-image-container img {
+    width: 492px; 
+    height: 309px; 
+}

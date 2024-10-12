@@ -7,12 +7,20 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PrincipalComponent } from './principal/principal.component';
 import { LoginComponent } from './login/login.component';
+import { QuemSomosComponent } from './quem-somos/quem-somos.component';
+import { EducacaoParaTodosComponent } from './educacao-para-todos/educacao-para-todos.component';
+import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
+import { DestaquesComponent } from './destaques/destaques.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalComponent,
-    LoginComponent
+    LoginComponent,
+    QuemSomosComponent,
+    EducacaoParaTodosComponent,
+    ComoFuncionaComponent,
+    DestaquesComponent
   ],
   imports: [
     BrowserModule,
