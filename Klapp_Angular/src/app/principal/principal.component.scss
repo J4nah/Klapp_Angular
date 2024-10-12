@@ -1,4 +1,9 @@
-/* Estilos gerais para telas grandes (computadores) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .background-container {
     background-image: url('/assets/images/background1.png');
     background-size: cover;
