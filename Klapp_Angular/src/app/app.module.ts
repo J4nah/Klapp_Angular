@@ -11,6 +11,9 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { EducacaoParaTodosComponent } from './educacao-para-todos/educacao-para-todos.component';
 import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
 import { DestaquesComponent } from './destaques/destaques.component';
+import { VisaoComponent } from './visao/visao.component';
+import { AvaliacoesComponent } from './avaliacoes/avaliacoes.component';
+import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { DestaquesComponent } from './destaques/destaques.component';
     QuemSomosComponent,
     EducacaoParaTodosComponent,
     ComoFuncionaComponent,
-    DestaquesComponent
+    DestaquesComponent,
+    VisaoComponent,
+    AvaliacoesComponent,
+    FaleConoscoComponent
   ],
   imports: [
     BrowserModule,
