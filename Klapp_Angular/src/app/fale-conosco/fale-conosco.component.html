@@ -1,1 +1,25 @@
-<p>fale-conosco works!</p>
+<div class="form-container">
+    <form (ngSubmit)="onSubmit(faleConoscoForm)" #faleConoscoForm="ngForm">
+      <h1>Fale com a gente</h1>
+  
+      <div>
+        <input type="text" id="name" name="name" ngModel required placeholder="Nome Completo">
+      </div>
+  
+      <div class="row">
+        <div class="col">
+          <input type="email" id="email" name="email" ngModel required placeholder="exemplo@email.com">
+        </div>
+        <div class="col">
+          <input type="tel" id="phone" name="phone" ngModel required placeholder="(11) 12345-6789">
+        </div>
+      </div>
+  
+      <div>
+        <textarea id="message" name="message" ngModel required placeholder="Digite aqui sua mensagem"></textarea>
+      </div>
+  
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+  

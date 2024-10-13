@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.footer-container {
+    height: 499px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #E6E7E8;
+    color: #191D6B;
+    
+}
+
+.footer-column {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    margin: 0 130px;
+    margin-top: 80px;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-column:last-child {
+    margin-right: 130px;
+}
+
+.footer-column h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    color: #191D6B;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-list li {
+   display: inline-block;
+   margin-right: 15px;
+   margin-top: 10px;
+   
+   
+}
+
+.newsletter {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+    
+    
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.newsletter-form input {
+    width: 210px;
+    height: 28px;
+    padding: 10px;
+    border: none;
+    margin-right: 10px;
+    /* Espaçamento entre o input e o botão */
+}
+
+.newsletter-form button {
+    height: 28px;
+    width: 82px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    background-color: #C9C9C9;
+    color: #2A256D;
+    border: none;
+    cursor: pointer;
+    text-align: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

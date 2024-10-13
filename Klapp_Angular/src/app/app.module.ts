@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // Importando o FormsModule
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +14,8 @@ import { DestaquesComponent } from './destaques/destaques.component';
 import { VisaoComponent } from './visao/visao.component';
 import { AvaliacoesComponent } from './avaliacoes/avaliacoes.component';
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
+import { FooterCinzaComponent } from './footer-cinza/footer-cinza.component';
+import { FooterBrancoComponent } from './footer-branco/footer-branco.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,15 @@ import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
     DestaquesComponent,
     VisaoComponent,
     AvaliacoesComponent,
-    FaleConoscoComponent
+    FaleConoscoComponent,
+    FooterCinzaComponent,
+    FooterBrancoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule // Adicionando o FormsModule aqui
+    FormsModule
   ],
   providers: [
     provideClientHydration()

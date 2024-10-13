@@ -11,7 +11,7 @@
 }
 
 h1 {
-    padding-top: 100px;
+    padding-top: 150px;
     padding-bottom: 30px;
     font-family: "Poppins", sans-serif;
     font-size: 40px;
@@ -57,17 +57,19 @@ h1 {
     font-family: "Poppins", sans-serif;
     color: #4D4D4D;
     text-align: center;
-    padding: 0;
+    
 }
 
 
 .nome {
     padding-top: 20px;
     font-size: 20px;
+    margin: 0;
 }
 
 .profissao {
     font-size: 16px;
+    margin: 0;
 }
 
 .box img {
@@ -78,3 +80,8 @@ h1 {
 }
 
 
+ngb-rating{
+   
+    font-size: 20px;
+    color: #FFB10A;
+}
