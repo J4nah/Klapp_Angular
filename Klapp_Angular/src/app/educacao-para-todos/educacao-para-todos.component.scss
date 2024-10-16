@@ -61,3 +61,14 @@
     height: 57;
     width: 150;
 }
+
+@media (max-width: 768px) {
+    .container-square {
+      flex-direction: column;
+    }
+    .square {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
