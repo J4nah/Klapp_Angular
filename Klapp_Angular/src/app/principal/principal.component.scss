@@ -1,35 +1,40 @@
+/* Estilos globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Container principal */
 .background-container {
     background-image: url('/assets/images/background1.svg');
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
+
 }
 
-.estudante-container {
-    position: absolute;
-    bottom: 0;
-    left: 120px;
-    right: 728px;
-}
-
-.estudante-imagem {
-    max-width: 500px;
-}
-
+/* Logotipo */
 .logo-container {
-    width: 250px;
-    height: 92.35px;
-    margin-left: 72px;
-    padding-top: 32px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    max-width: 250px;
 }
 
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo-container {
+        max-width: 200px;
+    }
+}
