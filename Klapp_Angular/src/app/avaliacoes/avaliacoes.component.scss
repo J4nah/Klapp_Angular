@@ -6,13 +6,14 @@
 
 .container-avaliacoes {
     text-align: center;
+    padding: 0;
 }
 
 h1 {
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 30px;
     font-family: "Poppins", sans-serif;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 500;
     color: #191D6B;
 }
@@ -20,16 +21,17 @@ h1 {
 .container-azul {
     background-color: #191D6B;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    padding-top: 85px;
+    padding-top: 50px;
     text-align: center;
     justify-content: center;
     position: relative;
 }
 
 .box {
-    width: 303px;
-    height: 353px;
+    width: 100%;
+    max-width: 303px;
     background-color: white;
     border: none;
     border-radius: 50px 0px;
@@ -39,15 +41,14 @@ h1 {
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
-    
-    
+    padding: 20px;
 }
-
 
 .text {
     color: #878787;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+    font-size: 14px;
 }
 
 .nome,
@@ -55,19 +56,15 @@ h1 {
     font-family: "Poppins", sans-serif;
     color: #4D4D4D;
     text-align: center;
-    
 }
 
-
 .nome {
-    padding-top: 20px;
-    font-size: 20px;
-    margin: 0;
+    padding-top: 15px;
+    font-size: 18px;
 }
 
 .profissao {
-    font-size: 16px;
-    margin: 0;
+    font-size: 14px;
 }
 
 .box img {
@@ -77,9 +74,49 @@ h1 {
     height: 54px;
 }
 
-
-ngb-rating{
-   
+ngb-rating {
     font-size: 20px;
     color: #FFB10A;
+    margin-top: 15px;
+}
+
+/* Regras de media query para responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+        padding-top: 80px;
+    }
+
+    .container-azul {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .box {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 26px;
+        padding-top: 60px;
+    }
+
+    .box {
+        max-width: 100%;
+    }
+
+    .text {
+        font-size: 12px;
+    }
+
+    .nome {
+        font-size: 16px;
+    }
+
+    .profissao {
+        font-size: 14px;
+    }
 }

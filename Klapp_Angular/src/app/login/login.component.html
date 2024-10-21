@@ -10,6 +10,7 @@
 
         <div class="col-lg-7 col-md-5 d-flex flex-column align-items-center justify-content-end">
             <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm" class="w-75">
+
                 <h1 class="text-center mb-4">Olá, vamos começar?</h1>
                 <div class="form-group">
                     <input type="text" id="username" name="username" ngModel required placeholder="Entre com seu e-mail"
@@ -26,7 +27,9 @@
                     </div>
                     <button type="button" class="btn btn-link btn-rec-senha p-0 align-self-start">Recuperar senha?</button>
                 </div>
-                <button type="submit" class="btn btn-primary w-100 mb-3">Fazer Login</button>
+                <button type="submit" (click)="onSubmit(loginForm)" class="btn btn-primary w-100 mb-3">Fazer Login</button>
+
+
                 <div class="container-traco text-center my-4">
                     <span class="text">Ou continue com</span>
                 </div>
