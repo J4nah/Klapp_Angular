@@ -10,9 +10,10 @@ import { DestaquesComponent } from './destaques/destaques.component'; // Importa
 import { VisaoComponent } from './visao/visao.component'; // Importar o componente "Visão"
 import { AvaliacoesComponent } from './avaliacoes/avaliacoes.component'; // Importar o componente "Avaliações"
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component'; // Importar o componente "Fale Conosco"
+import { LandingCompletaComponent } from './landing-completa/landing-completa.component';
 
 const routes: Routes = [
-  { path: '', component: PrincipalComponent }, // Rota inicial para o componente Principal
+  { path: '', component: LandingCompletaComponent }, // Rota inicial para o componente Principal
   { path: 'login', component: LoginComponent }, // Rota para o Login
   { path: 'tela-aluno', component: TelaAlunoComponent }, // Rota para a Tela do Aluno
   { path: 'quem-somos', component: QuemSomosComponent }, // Rota para "Quem Somos"

@@ -17,6 +17,7 @@ import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 import { FooterCinzaComponent } from './footer-cinza/footer-cinza.component';
 import { FooterBrancoComponent } from './footer-branco/footer-branco.component';
 import { TelaAlunoComponent } from './tela-aluno/tela-aluno.component';
+import { LandingCompletaComponent } from './landing-completa/landing-completa.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TelaAlunoComponent } from './tela-aluno/tela-aluno.component';
     FaleConoscoComponent,
     FooterCinzaComponent,
     FooterBrancoComponent,
-    TelaAlunoComponent
+    TelaAlunoComponent,
+    LandingCompletaComponent
   ],
   imports: [
     BrowserModule,
