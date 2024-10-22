@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PrincipalComponent } from './principal/principal.component';
 import { LoginComponent } from './login/login.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
@@ -20,6 +20,9 @@ import { TelaAlunoComponent } from './tela-aluno/tela-aluno.component';
 import { LandingCompletaComponent } from './landing-completa/landing-completa.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { BannerTopComponent } from './banner-top/banner-top.component';
+import { LogoutImageComponent } from './logout-image/logout-image.component';
+import { RankingComponent } from './ranking/ranking.component';
+import { SideRightComponent } from './side-right/side-right.component';
 
 @NgModule({
   declarations: [
@@ -38,13 +41,17 @@ import { BannerTopComponent } from './banner-top/banner-top.component';
     TelaAlunoComponent,
     LandingCompletaComponent,
     SideMenuComponent,
-    BannerTopComponent
+    BannerTopComponent,
+    LogoutImageComponent,
+    RankingComponent,
+    SideRightComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    NgbCarouselModule
   ],
   providers: [
     provideClientHydration()

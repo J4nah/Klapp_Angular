@@ -1,6 +1,24 @@
-.container{
-    width: 200px;
-    height: 150px;
-    color: white;
-   
+/* banner-top.component.scss */
+*{
+  padding: 0;
+  margin: 0;
+}
+.banner-border {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.3); /* Fundo semitransparente */
+    backdrop-filter: blur(10px); /* Aplica o desfoque */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidade com navegadores WebKit */
+  }
+  
+  
+  .carousel-caption h3,
+  .carousel-caption p {
+    margin: 0;
+  }
+  
+
+.carousel-caption {
+  visibility: visible !important; /* Garante que o conteúdo seja visível */
+  opacity: 1 !important; /* Garante que o conteúdo seja opaco */
+  position: relative; /* Garante que o conteúdo esteja na posição correta */
 }
