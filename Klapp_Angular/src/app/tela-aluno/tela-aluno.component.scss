@@ -1,0 +1,8 @@
+div {
+    background-image: url('/assets/images/Background.svg');
+    background-size: cover; /* Faz a imagem cobrir toda a área do elemento */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center; /* Centraliza a imagem no elemento */
+    width: 100vw; /* Largura total da tela */
+    height: 100vh; /* Altura total da tela */
+}
