@@ -19,6 +19,7 @@ import { FooterBrancoComponent } from './footer-branco/footer-branco.component';
 import { TelaAlunoComponent } from './tela-aluno/tela-aluno.component';
 import { LandingCompletaComponent } from './landing-completa/landing-completa.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
+import { BannerTopComponent } from './banner-top/banner-top.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
     FooterBrancoComponent,
     TelaAlunoComponent,
     LandingCompletaComponent,
-    SideMenuComponent
+    SideMenuComponent,
+    BannerTopComponent
   ],
   imports: [
     BrowserModule,
