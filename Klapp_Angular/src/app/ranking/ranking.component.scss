@@ -4,3 +4,64 @@
     backdrop-filter: blur(10px); /* Aplica o desfoque */
     -webkit-backdrop-filter: blur(10px); /* Compatibilidade com navegadores WebKit */
   }
+
+  .text{
+    margin-top: 30px;
+    font-size: 44px;
+    font-weight: 600;
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+
+  span{
+    color: #191D6B;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .podio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  
+  .row {
+    margin-top: auto;
+    display: flex;
+    align-items: end; /* Alinha os itens no final */
+  }
+  
+  .box {
+    height: 100%; /* Ajusta a altura das caixas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #474A89;
+    border-radius: 8px;
+  }
+   
+
+  p{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: #FFF;
+    font-size: 24px;
+  }
+
+  .first{
+    
+    height: 300px;
+  }
+
+  .second{
+   
+    height: 250x;
+  }
+
+  .third{
+   
+    height: 200px;
+  }
+  .col-md-3{
+    margin: 0;
+  }
