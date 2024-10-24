@@ -1,3 +1,31 @@
-<div class="container banner-border border border-2 p-0" style="border-radius: 8px; width: 18vw; height: 78vh; margin-left: 10px;">
-
+<div class="banner-border border border-2" style="border-radius: 8px; min-height: 553px; min-width: 350px;">
+    <br>
+    <div ngbAccordion #accordion="ngbAccordion" class="custom-accordion">
+        <div ngbAccordionItem="first" class="selecao">
+            <h2 ngbAccordionHeader>
+                <button ngbAccordionButton><i class="bi bi-clock m-2"></i> Quizzes pendentes</button>
+            </h2>
+            <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                    <ng-template>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div ngbAccordion #accordion="ngbAccordion" class="custom-accordion">
+        <div ngbAccordionItem="first">
+            <h2 ngbAccordionHeader>
+                <button ngbAccordionButton><i class="bi bi-person-check m-2"></i> Suas pontuações</button>
+            </h2>
+            <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                    <ng-template>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+

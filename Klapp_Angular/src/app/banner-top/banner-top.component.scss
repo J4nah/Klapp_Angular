@@ -1,34 +1,21 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 .banner-border {
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.3); /* Fundo semitransparente */
-  backdrop-filter: blur(10px); /* Aplica o desfoque */
-  -webkit-backdrop-filter: blur(10px); /* Compatibilidade com navegadores WebKit */
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .carousel-caption {
-  visibility: visible !important; /* Garante que o conteúdo seja visível */
-  opacity: 1 !important; /* Garante que o conteúdo seja opaco */
+  visibility: visible !important;
   position: relative;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%; /* Ocupa toda a largura disponível */
-  height: 100%; /* Ocupa toda a altura disponível */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+ }
+
 
 .carousel-caption p {
   color: white;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
-  margin: 0;
-  margin-right: 25%;
+  margin-top: 38px;
+  text-align: center;
 }
+
