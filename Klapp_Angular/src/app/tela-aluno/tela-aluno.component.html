@@ -1,19 +1,15 @@
-<div class="background-container">
-  <div class="tela-aluno-container d-flex p-4">
-    <!-- Side Menu Alinhado à Esquerda -->
-    <app-side-menu class="side-menu" style="margin-right: 10px;"></app-side-menu>
-  
-    <!-- Banner Top Centralizado -->
-    <div class="banner-top-container flex-grow-1 d-flex flex-column">
-      <div class="d-flex justify-content-between align-items-start">
-        <app-banner-top class="banner-top mb-3"></app-banner-top>
-        <app-logout-image></app-logout-image> <!-- Componente de logout -->
-      </div>
-      <!-- Componente Ranking abaixo do Banner -->
-      <div class="ranking-container">
-        <app-ranking></app-ranking>
-        <app-side-right></app-side-right>
-      </div>
+<div class=" background-container container-fluid">
+  <div class="row g-1">
+    <div class="col-md-3 mt-3">
+      <app-side-menu></app-side-menu>
+    </div>
+    <div class="col-md-6 mt-3"> 
+      <app-banner-top></app-banner-top>
+      <app-ranking></app-ranking>
+    </div>
+    <div class="col-md-3 mt-3">
+      <app-logout-image></app-logout-image>
+      <app-side-right></app-side-right>
     </div>
   </div>
 </div>
