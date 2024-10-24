@@ -23,7 +23,14 @@ import { BannerTopComponent } from './banner-top/banner-top.component';
 import { LogoutImageComponent } from './logout-image/logout-image.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { SideRightComponent } from './side-right/side-right.component';
-
+import { StudentQuizzes01Component } from './student-quizzes01/student-quizzes01.component';
+import { ColocacaoComponent } from './colocacao/colocacao.component';
+import { RankingMessageComponent } from './ranking-message/ranking-message.component';
+import { StudentProgressComponent } from './student-progress/student-progress.component';
+import { ProgressoComponent } from './progresso/progresso.component';
+import { StudentProgressLineChartComponent } from './student-progress-line-chart/student-progress-line-chart.component';
+import { StudentRadarChartComponent } from './student-radar-chart/student-radar-chart.component';
+import { RightSideEstilosAprendizagemComponent } from './right-side-estilos-aprendizagem/right-side-estilos-aprendizagem.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +51,15 @@ import { SideRightComponent } from './side-right/side-right.component';
     BannerTopComponent,
     LogoutImageComponent,
     RankingComponent,
-    SideRightComponent
+    SideRightComponent,
+    StudentQuizzes01Component,
+    ColocacaoComponent,
+    RankingMessageComponent,
+    StudentProgressComponent,
+    ProgressoComponent,
+    StudentProgressLineChartComponent,
+    StudentRadarChartComponent,
+    RightSideEstilosAprendizagemComponent,
   ],
   imports: [
     BrowserModule,

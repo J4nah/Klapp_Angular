@@ -1,0 +1,23 @@
+<div class="background-container">
+    <div class="tela-aluno-container d-flex p-4">
+      <!-- Side Menu Alinhado à Esquerda -->
+      <app-side-menu class="side-menu" style="margin-right: 10px;"></app-side-menu>
+    
+      <!-- Banner Top Centralizado -->
+      <div class="banner-top-container flex-grow-1 d-flex flex-column">
+        <div class="d-flex justify-content-between align-items-start">
+          <app-banner-top class="banner-top mb-3"></app-banner-top>
+          <app-logout-image></app-logout-image> <!-- Componente de logout -->
+        </div>
+        <!-- Componente Ranking abaixo do Banner -->
+        <div class="ranking-container">
+            <div class="row text-start" style="height: 78vh;">
+                <app-progresso></app-progresso>
+            </div>
+          <!-- <app-side-right></app-side-right> -->
+           <app-right-side-estilos-aprendizagem></app-right-side-estilos-aprendizagem>
+        </div>
+      </div>
+    </div>
+  </div>
+  
