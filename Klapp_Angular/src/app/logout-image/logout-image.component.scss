@@ -4,3 +4,18 @@
     backdrop-filter: blur(10px); /* Aplica o desfoque */
     -webkit-backdrop-filter: blur(10px); /* Compatibilidade com navegadores WebKit */
   }
+
+  a, p{
+    color: #FFF;
+    font-size: 18px;
+    margin: 5px;
+    text-align: start;
+  }
+
+  p{
+    margin-left: 10px;
+  }
+
+  img{
+   margin-left: 20px;
+  }
