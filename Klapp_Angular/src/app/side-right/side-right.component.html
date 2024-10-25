@@ -1,4 +1,4 @@
-<div class="banner-border border border-2" style="border-radius: 8px; min-height: 553px; min-width: 350px;">
+<div class="banner-border border border-2" style="min-height: 553px; min-width: 350px;">
     <br>
     <div ngbAccordion #accordion="ngbAccordion" class="custom-accordion">
         <div ngbAccordionItem="first" class="selecao">
@@ -8,6 +8,28 @@
             <div ngbAccordionCollapse>
                 <div ngbAccordionBody>
                     <ng-template>
+                        <div class="quiz-pendente d-flex banner-border border border-2 m-2">
+                            <img src="/assets/images/books.svg" alt="imagem de livros">
+                            <div class="materia">
+                                <p>Fundamentos de
+                                    Sistemas de Informação</p>
+                                <div class="inferior">
+                                    <p>Disponível até 16/12</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quiz-pendente d-flex banner-border border border-2 m-2">
+                            <img src="/assets/images/pastas.svg" alt="imagem de livros">
+                            <div class="materia">
+                                <p style="margin-right: 50px; margin-bottom: 25px;">Banco de dados </p>
+                                <div class="inferior">
+                                    <p>Disponível até 16/12</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        
                     </ng-template>
                 </div>
             </div>
@@ -28,4 +50,3 @@
         </div>
     </div>
 </div>
-
