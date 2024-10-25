@@ -13,6 +13,7 @@ import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component'; //
 import { LandingCompletaComponent } from './landing-completa/landing-completa.component';
 import { StudentQuizzes01Component } from './student-quizzes01/student-quizzes01.component';
 import { StudentProgressComponent } from './student-progress/student-progress.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
   { path: '', component: LandingCompletaComponent }, // Rota inicial para o componente Principal
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'avaliacoes', component: AvaliacoesComponent }, // Rota para "Avaliações"
   { path: 'fale-conosco', component: FaleConoscoComponent }, // Rota para "Fale Conosco"
   // Adicione mais rotas conforme necessário
+  {path: 'perfil', component: PerfilComponent}
 ];
 
 @NgModule({

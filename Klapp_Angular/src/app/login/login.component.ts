@@ -5,11 +5,11 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'] // Verifique se este arquivo existe no caminho correto
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  username: string = ''; // Inicializando com uma string vazia
-  password: string = ''; // Inicializando com uma string vazia
+  username: string = '';
+  password: string = ''; 
 
   constructor(private router: Router) {}
 

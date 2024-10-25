@@ -31,6 +31,9 @@ import { ProgressoComponent } from './progresso/progresso.component';
 import { StudentProgressLineChartComponent } from './student-progress-line-chart/student-progress-line-chart.component';
 import { StudentRadarChartComponent } from './student-radar-chart/student-radar-chart.component';
 import { RightSideEstilosAprendizagemComponent } from './right-side-estilos-aprendizagem/right-side-estilos-aprendizagem.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { ProfileContainerComponent } from './profile-container/profile-container.component';
+import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +63,9 @@ import { RightSideEstilosAprendizagemComponent } from './right-side-estilos-apre
     StudentProgressLineChartComponent,
     StudentRadarChartComponent,
     RightSideEstilosAprendizagemComponent,
+    PerfilComponent,
+    ProfileContainerComponent,
+    AlterarSenhaComponent,
   ],
   imports: [
     BrowserModule,
