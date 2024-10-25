@@ -34,6 +34,7 @@ import { RightSideEstilosAprendizagemComponent } from './right-side-estilos-apre
 import { PerfilComponent } from './perfil/perfil.component';
 import { ProfileContainerComponent } from './profile-container/profile-container.component';
 import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
+import { BannerPontuacoesComponent } from './banner-pontuacoes/banner-pontuacoes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +67,7 @@ import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
     PerfilComponent,
     ProfileContainerComponent,
     AlterarSenhaComponent,
+    BannerPontuacoesComponent,
   ],
   imports: [
     BrowserModule,
