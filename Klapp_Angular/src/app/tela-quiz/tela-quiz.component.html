@@ -1,0 +1,59 @@
+<div class="background-container container-fluid">
+  <div class="row" style="gap: 10px">
+    <div class="col-md-2 mt-3">
+      <app-side-menu></app-side-menu>
+    </div>
+    <div class="col-md-7 mt-3">
+      <app-banner-top>
+      </app-banner-top>
+      <div class="container banner-border border border-2" style="border-radius: 8px; height: 553px;">
+        <div class="d-flex justify-content-center">
+          <h3 class="text-white mt-1 mb-2">Fundamentos de Sistemas de Informação</h3>
+        </div>
+
+        <!-- Barra de progresso -->
+        <div class="d-flex justify-content-center">
+          <div class="progress-bar-container" style="width: 80%; background-color: #e0e0e0; border-radius: 8px; position: relative;">
+            <div class="progress-bar" [style.width.%]="progress" style="padding: 10px 0; border-radius: 8px; background-color: #474A89; color: white; text-align: center;">
+              <div class="question-indicator" [ngStyle]="{ 'color': currentQuestionIndex >= 2 ? 'white' : '#474A89' }" style="position: absolute; width: 100%; top: 50%; transform: translateY(-50%); text-align: center;">
+                Questão {{ currentQuestionIndex + 1 }} de {{ totalQuestions }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column align-items-center mt-3">
+          <p class="text-white">{{ questions[currentQuestionIndex].question }}</p>
+
+          <!-- Exibição das opções em grid -->
+          <div class="options-grid">
+            <div *ngFor="let option of questions[currentQuestionIndex].options; let i = index" class="option-container">
+              <!-- Letra da opção (A, B, C, etc.) -->
+              <div class="option-letter">
+                {{ getOptionLetter(i) }}
+              </div>
+              <!-- Texto da opção -->
+              <label class="option-label" [for]="option">
+                <input type="radio" class="d-none" [id]="option" name="options" (change)="updateAnswer(option)" />
+                {{ option }}
+              </label>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <!-- Botão Próximo -->
+        <div class="d-flex justify-content-center mt-3">
+          <button class="btn btn-primary next-button" (click)="increaseProgress()">
+            {{ currentQuestionIndex === totalQuestions - 1 ? 'Enviar' : 'Próximo' }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 mt-3">
+      <app-logout-image></app-logout-image>
+      <app-side-right></app-side-right>
+    </div>
+  </div>

@@ -14,6 +14,7 @@ import { LandingCompletaComponent } from './landing-completa/landing-completa.co
 import { StudentQuizzes01Component } from './student-quizzes01/student-quizzes01.component';
 import { StudentProgressComponent } from './student-progress/student-progress.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { TelaQuizComponent } from './tela-quiz/tela-quiz.component';
 
 const routes: Routes = [
   { path: '', component: LandingCompletaComponent }, // Rota inicial para o componente Principal
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'quem-somos', component: QuemSomosComponent }, // Rota para "Quem Somos"
   { path: 'educacao-para-todos', component: EducacaoParaTodosComponent }, // Rota para "Educação para Todos"
   {path: 'studentQuizzes01', component: StudentQuizzes01Component}, // BIGEUS: rota de mesmo nome no figma
+  {path :'tela-quiz', component: TelaQuizComponent},
   {path: 'student-progress', component: StudentProgressComponent}, // BIGEUS: rota de mesmo nome no figma tbm kkkkkk chega de ler aq ou
   { path: 'como-funciona', component: ComoFuncionaComponent }, // Rota para "Como Funciona"
   { path: 'destaques', component: DestaquesComponent }, // Rota para "Destaques"

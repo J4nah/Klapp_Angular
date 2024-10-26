@@ -35,6 +35,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { ProfileContainerComponent } from './profile-container/profile-container.component';
 import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
 import { BannerPontuacoesComponent } from './banner-pontuacoes/banner-pontuacoes.component';
+import { TelaQuizComponent } from './tela-quiz/tela-quiz.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +69,7 @@ import { BannerPontuacoesComponent } from './banner-pontuacoes/banner-pontuacoes
     ProfileContainerComponent,
     AlterarSenhaComponent,
     BannerPontuacoesComponent,
+    TelaQuizComponent,
   ],
   imports: [
     BrowserModule,
