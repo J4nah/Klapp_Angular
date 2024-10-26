@@ -1,7 +1,6 @@
 <div class="banner-border border border-2" style="min-height: 553px; min-width: 350px;">
-    <br>
-    <div ngbAccordion #accordion="ngbAccordion" class="custom-accordion">
-        <div ngbAccordionItem="first" class="selecao">
+    <div ngbAccordion>
+        <div ngbAccordionItem [collapsed]="false">
             <h2 ngbAccordionHeader>
                 <button ngbAccordionButton><i class="bi bi-clock m-2"></i> Quizzes pendentes</button>
             </h2>
@@ -28,54 +27,57 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </ng-template>
                 </div>
             </div>
         </div>
-    </div>
-    <br>
-    <div ngbAccordion #accordion="ngbAccordion" class="custom-accordion">
-        <div ngbAccordionItem="first">
+        <div ngbAccordionItem>
             <h2 ngbAccordionHeader>
                 <button ngbAccordionButton><i class="bi bi-person-check m-2"></i> Suas pontuações</button>
             </h2>
             <div ngbAccordionCollapse>
                 <div ngbAccordionBody>
                     <ng-template>
-
                         <div class="materia1">
-                            <p>Ciências Exatas</p>
+                            <p class="m-1">Ciências Exatas</p>
                             <div class="pontuacao">
+                                <ngb-progressbar class="mb-3 custom-progress" [value]="50">Copying file <b>5 /
+                                        10</b>...</ngb-progressbar>
 
                             </div>
                         </div>
                         <div class="materia2">
-                            <p></p>
+                            <p class="m-1">Sustentabilidade</p>
                             <div class="pontuacao">
-                                
+                                <ngb-progressbar class="mb-3 custom-progress"  [value]="80">Copying file <b>8 /
+                                        10</b>...</ngb-progressbar>
+
                             </div>
                         </div>
                         <div class="materia3">
-                            <p></p>
+                            <p class="m-1">Arquitetura de Computadores</p>
                             <div class="pontuacao">
-                                
+                                <ngb-progressbar class="mb-3 custom-progress"  [value]="100">Copying file <b>10 /
+                                        10</b>...</ngb-progressbar>
+
                             </div>
                         </div>
                         <div class="materia4">
-                            <p></p>
+                            <p class="m-1">Construção de Algoritmos</p>
                             <div class="pontuacao">
-                                
-                            </div>
-                        </div>
-                        <div class="materia5">
-                            <p></p>
-                            <div class="pontuacao">
-                                
-                            </div>
-                        </div>
+                                <ngb-progressbar class="mb-3 custom-progress" [value]="40">Copying file <b>4 /
+                                        10</b>...</ngb-progressbar>
 
+                            </div>
+                        </div>
+                        <div class="pontuacao-geral">
+                            <p class="m-1">Pontuação Geral</p>
+                            <div class="pontuacao">
+                                <ngb-progressbar class="mb-3 custom-progress" [value]="65">Copying file <b>6.75 /
+                                        10</b>...</ngb-progressbar>
+
+                            </div>
+                        </div>
                     </ng-template>
                 </div>
             </div>
