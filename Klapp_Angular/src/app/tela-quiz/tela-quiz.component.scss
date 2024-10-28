@@ -30,7 +30,7 @@
 }
 
 span {
-  color: #191D6B;
+  color: #474A89;
   font-family: "Poppins", sans-serif;
 }
 
@@ -120,7 +120,7 @@ p {
 }
 
 input[type="radio"]:checked + .option-label {
-  background-color: rgba(71, 74, 137, 0.8);
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 8px;
 }
 
@@ -138,4 +138,64 @@ button {
   &:hover {
     background-color: #5e62a6;
   }
+}
+
+/* Estilos para o container de opções */
+.options-grid {
+  display: grid;
+  gap: 10px;
+  width: 80%;
+}
+
+.option-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background-color: #474A89;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.option-container.selected {
+  background-color: #888888; /* Fundo para alternativa selecionada */
+  border: 2px solid #FFF; /* Indicação de seleção */
+}
+
+.option-container:hover {
+  background-color: #cacaca;
+  backdrop-filter: blur(10px);
+}
+
+.option-letter {
+  font-weight: bold;
+  margin-right: 10px; /* Espaço entre a letra e o texto */
+}
+
+.option-label {
+  cursor: pointer;
+}
+
+/* Estilos para o gráfico tipo Donut */
+.donut-chart {
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+
+.donut-chart-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.donut-chart-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
 }

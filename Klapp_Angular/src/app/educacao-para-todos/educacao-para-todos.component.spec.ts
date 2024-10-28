@@ -11,7 +11,6 @@ describe('EducacaoParaTodosComponent', () => {
       declarations: [EducacaoParaTodosComponent]
     })
     .compileComponents();
-    
     fixture = TestBed.createComponent(EducacaoParaTodosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tela-quiz',
@@ -6,13 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./tela-quiz.component.scss']
 })
 export class TelaQuizComponent {
-  progress: number = 0; // Valor inicial de progresso
-  clickCount: number = 0; // Contador de cliques
-  totalQuestions: number = 5; // Total de perguntas
-  answers: string[] = []; // Array para armazenar as respostas
-  currentQuestionIndex: number = 0; // Índice da pergunta atual
+  progress: number = 0;
+  currentQuestionIndex: number = 0;
+  totalQuestions: number = 5;
+  answers: string[] = [];
+  correctAnswers: string[] = ['Paris', '4', 'Júpiter', 'Machado de Assis', 'H2O'];
+  score: number = 0;
+  showScoreChart: boolean = false;
+  selectedOption: string | null = null; // Inicializa selectedOption como null
 
-  questions: { question: string; options: string[] }[] = [ // Exemplo de perguntas
+  questions: { question: string; options: string[] }[] = [
     { question: 'Qual é a capital da França?', options: ['Paris', 'Londres', 'Berlim', 'Roma'] },
     { question: 'Qual é a soma de 2 + 2?', options: ['3', '4', '5', '6'] },
     { question: 'Qual é o maior planeta do sistema solar?', options: ['Terra', 'Marte', 'Júpiter', 'Saturno'] },
@@ -20,44 +24,54 @@ export class TelaQuizComponent {
     { question: 'Qual é a fórmula química da água?', options: ['H2O', 'CO2', 'O2', 'NaCl'] },
   ];
 
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.updateProgress();
+  }
+
   // Atualiza a resposta do usuário
   updateAnswer(answer: string) {
-    this.answers[this.currentQuestionIndex] = answer; // Armazena a resposta no índice correspondente
+    this.answers[this.currentQuestionIndex] = answer;
+  }
+
+  // Define a opção selecionada e atualiza a resposta
+  selectOption(option: string) {
+    this.selectedOption = option;
+    this.updateAnswer(option); // Atualiza a resposta para a pergunta atual
   }
 
   // Incrementa o índice da pergunta ou envia as respostas
   increaseProgress() {
-    this.clickCount++; // Incrementa o contador de cliques
-
     if (this.currentQuestionIndex < this.totalQuestions - 1) {
       this.currentQuestionIndex++;
+      this.selectedOption = null; // Reseta selectedOption ao passar para a próxima pergunta
       this.updateProgress();
     } else {
-      // Envia as respostas se for o último clique
-      this.submitAnswers();
+      this.calculateScore();
     }
   }
 
   // Atualiza a barra de progresso
   updateProgress() {
-    this.progress = ((this.currentQuestionIndex + 1) / this.totalQuestions) * 100; // Calcula o progresso em % 
+    this.progress = ((this.currentQuestionIndex + 1) / this.totalQuestions) * 100;
   }
 
-  // Função para enviar as respostas
+  // Calcula a pontuação do usuário
+  calculateScore() {
+    this.score = this.answers.filter((answer, index) => answer === this.correctAnswers[index]).length;
+    this.showScoreChart = true;
+  }
+
+  // Função para enviar as respostas e redirecionar para a Home
   submitAnswers() {
-    console.log('Respostas enviadas:', this.answers);
-    alert('Respostas enviadas com sucesso!');
-    // Aqui você pode adicionar a lógica para enviar as respostas para o servidor
+    alert(`Você acertou ${this.score} de ${this.totalQuestions} questões!`);
+    this.router.navigate(['/tela-aluno']);
   }
 
-  // Função para retornar a letra da opção
+  // Função para retornar a letra da opção (A, B, C, etc.)
   getOptionLetter(index: number): string {
-    const letters = ['A', 'B', 'C', 'D', 'E']; // Lista de letras
+    const letters = ['A', 'B', 'C', 'D'];
     return letters[index];
-  }
-
-  // Inicializa a barra de progresso ao começar
-  ngOnInit() {
-    this.updateProgress(); // Chama para definir o progresso inicial
   }
 }
