@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-logout-image',
   templateUrl: './logout-image.component.html',
   styleUrls: ['./logout-image.component.scss']
 })
-export class LogoutImageComponent implements OnInit {
-  notificationVisible = true;
+export class LogoutImageComponent {
+  notificationVisible = false; // Inicialmente, a notificação está oculta
 
-  ngOnInit() {
+  // Função para alternar a visibilidade da notificação ao clicar no ícone de sino
+  toggleNotification() {
+    this.notificationVisible = true; // Exibe a notificação quando o ícone é clicado
     setTimeout(() => {
-      this.notificationVisible = false;
-    }, 5000); // A notificação permanece visível por 5 segundos
+      this.notificationVisible = false; // Esconde a notificação após 5 segundos
+    }, 5000);
   }
 }
