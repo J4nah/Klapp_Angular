@@ -1,19 +1,30 @@
 * {
   color: #FFF;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
-h1{
+.form-container,
+.notas-container,
+.nota,
+input,
+button {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+h1 {
   font-size: 25px;
 }
 
-h2{
+h2 {
   font-size: 20px;
 }
 
-p{
+p {
   font-size: 15px;
 }
+
 .banner-border {
   padding: 10px;
   background: rgba(255, 255, 255, 0.3);
@@ -29,7 +40,7 @@ form {
 }
 
 label {
- margin: 0;
+  margin: 0;
 }
 
 
@@ -37,7 +48,7 @@ input[type="text"],
 input[type="number"] {
   margin: 0;
   color: #FFF;
-  height: 30px;
+  height: 25px;
   border-radius: 8px;
   background-color: transparent;
   font-size: 16px;
@@ -50,6 +61,7 @@ input[type="number"] {
 .notas {
   display: flex;
   justify-content: space-between; // Espaça igualmente os itens
+  gap: 40px;
 }
 
 .nota {
@@ -60,3 +72,40 @@ input[type="number"] {
 .nota:last-child {
   margin-right: 0; // Remove margem do último item
 }
+
+.image-container {
+  position: relative;
+  display: inline-block; /* Mantém o tamanho do contêiner em torno da imagem */
+}
+
+.image-container img {
+  display: block;
+  width: 100%; /* Ajuste conforme necessário */
+}
+
+.btn-overlay {
+  background-color: #FFF;
+  position: absolute;
+  bottom: 25px; /* Ajuste conforme necessário */
+  right: 5px;  /* Ajuste conforme necessário */
+  background-color: transparent;
+  border: none;
+  font-size: 24px; /* Ajuste o tamanho conforme necessário */
+  cursor: pointer;
+}
+
+.btn-primary {
+  width: 100%;
+  height: 25px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: none;
+ 
+  cursor: pointer;
+  color: #fff;
+  
+  font-size: 20px;
+}
+
