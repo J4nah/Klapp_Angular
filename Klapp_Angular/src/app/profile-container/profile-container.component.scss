@@ -1,13 +1,62 @@
-*{
+* {
   color: #FFF;
   font-family: "Poppins", sans-serif;
 }
+
+h1{
+  font-size: 25px;
+}
+
+h2{
+  font-size: 20px;
+}
+
+p{
+  font-size: 15px;
+}
 .banner-border {
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.3);
-    /* Fundo semitransparente */
-    backdrop-filter: blur(10px);
-    /* Aplica o desfoque */
-    -webkit-backdrop-filter: blur(10px);
-    /* Compatibilidade com navegadores WebKit */
-  }
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+}
+
+form {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+ margin: 0;
+}
+
+
+input[type="text"],
+input[type="number"] {
+  margin: 0;
+  color: #FFF;
+  height: 30px;
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.notas-container {
+  margin-bottom: 2rem; // Espaçamento entre os anos
+}
+
+.notas {
+  display: flex;
+  justify-content: space-between; // Espaça igualmente os itens
+}
+
+.nota {
+  flex: 1; // Cada nota ocupa igual espaço
+  margin-right: 1rem; // Espaçamento entre as notas
+}
+
+.nota:last-child {
+  margin-right: 0; // Remove margem do último item
+}

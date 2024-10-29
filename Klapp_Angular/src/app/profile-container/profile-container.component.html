@@ -1,12 +1,96 @@
 <div class="container banner-border border border-2" style="border-radius: 8px; min-height: 555px;">
-    <div class="foto-dados m-3">
+    <div class="foto-dados">
         <h1>Perfil do aluno</h1>
-        
+        <div class="form-image d-flex me-5">
             <img src="/assets/images/Profile-imageG.svg" alt=""><i class="bi bi-plus-circle"></i>
+            <div>
+                <form (ngSubmit)="onSubmit()">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" [(ngModel)]="nome" name="nome" class="mb-2" required>
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" [(ngModel)]="email" name="email" class="mb-2" required>
+                    <label for="numeroFixo">RA</label>
+                    <input type="number" id="numeroFixo" [(ngModel)]="fixedNumber" name="numeroFixo" class="mb-2" disabled>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="dados-escolares">
+            <h2>Insira suas notas do ensino médio</h2>
+            <p>Preencha os campos abaixo com as suas médias anuais para calcular seu desempenho final.</p>
+
+            <form (ngSubmit)="onSubmit()" class="col-4">    
+                <div class="notas-container">
+                    <p>Primeiro ano</p>
+                    <div class="notas">
+                        <div class="nota">
+                            <label for="nota1">Matemática</label>
+                            <input type="number" id="nota1" [(ngModel)]="nota1" name="nota1" class="mb-2" required>
+                        </div>
+                        <div class="nota">
+                            <label for="nota2">Português</label>
+                            <input type="number" id="nota2" [(ngModel)]="nota2" name="nota2" class="mb-2" required>
+                        </div>
+                        <div class="nota">
+                            <label for="nota3">Biologia</label>
+                            <input type="number" id="nota3" [(ngModel)]="nota3" name="nota3" class="mb-2" required>
+                        </div>
+                        <div class="nota">
+                            <label for="nota4">Artes</label>
+                            <input type="number" id="nota4" [(ngModel)]="nota4" name="nota4" class="mb-2" required>
+                        </div>
+                    </div>
+                </div>
             
-          
-    <div class="dados-escolares m-3">
-        <h2>Insira suas notas do ensino médio</h2>
-        <p>Preencha os campos abaixo com as suas médias anuais para calcular seu desempenho final.</p>
+                <div class="notas-container">
+                    <p>Segundo ano</p>
+                    <div class="notas">
+                        <div class="nota">
+                            <label for="nota1-2">Matemática</label>
+                            <input type="number" id="nota1-2" [(ngModel)]="nota1_2" name="nota1_2" class="mb-2" required>
+                        </div>
+                        <div class="nota">
+                            <label for="nota2-2">Português</label>
+                            <input type="number" id="nota2-2" [(ngModel)]="nota2_2" name="nota2_2" class="mb-2" required>
+                        </div>
+                        <div class="nota">
+                            <label for="nota3-2">Biologia</label>
+                            <input type="number" id="nota3-2" [(ngModel)]="nota3_2" name="nota3_2" class="mb-2" required>
+                        </div>
+                        <div class="nota">
+                            <label for="nota4-2">Artes</label>
+                            <input type="number" id="nota4-2" [(ngModel)]="nota4_2" name="nota4_2" class="mb-2" required>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="notas-container">
+                    <p>Terceiro ano</p>
+                    <div class="notas">
+                        <div class="nota">
+                            <label for="nota1-3">Matemática</label>
+                            <input type="number" id="nota1-3" [(ngModel)]="nota1_3" name="nota1_3" class="mb-2" required>
+                        </div>
+                        <div class="nota">
+                            <label for="nota2-3">Português</label>
+                            <input type="number" id="nota2-3" [(ngModel)]="nota2_3" name="nota2_3" class="mb-2" required>
+                        </div>
+                        <div class="nota">
+                            <label for="nota3-3">Biologia</label>
+                            <input type="number" id="nota3-3" [(ngModel)]="nota3_3" name="nota3_3" class="mb-2" required>
+                        </div>
+                        <div class="nota">
+                            <label for="nota4-3">Artes</label>
+                            <input type="number" id="nota4-3" [(ngModel)]="nota4_3" name="nota4_3" class="mb-2" required>
+                        </div>
+                    </div>
+                </div>
+            
+                <button type="submit">Enviar</button>
+            </form>
+            
+            
+        </div>
     </div>
-</div>
