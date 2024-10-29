@@ -1,8 +1,20 @@
 <div class="container banner-border border border-2 mb-2" style="border-radius: 8px; max-height: 99px; min-width: 350px;">
- <div class="d-flex align-items-center m-3">
-     <a href=""><i class="bi bi-bell"></i></a>
-     <a href=""><i class="bi bi-box-arrow-right"></i></a>
-     <p>Olá, Carol Oliveira!</p>
-     <img src="/assets/images/Profile-image.svg" alt="">
- </div>
+    <div class="d-flex align-items-center m-3">
+      <a href="#"><i class="bi bi-bell"></i></a>
+      <a href="#"><i class="bi bi-box-arrow-right"></i></a>
+      <p>Olá, Carol Oliveira!</p>
+      <img src="/assets/images/Profile-image.svg" alt="Imagem de perfil de Carol Oliveira">
+    </div>
+</div>
+
+<!-- Notificação que aparece automaticamente por 5 segundos -->
+<div *ngIf="notificationVisible" class="notification">
+  <div class="notification-header">
+    <i class="bi bi-info-circle"></i>
+    <span>Nova notificação.</span>
+    <button class="close-btn" (click)="notificationVisible = false">×</button>
+  </div>
+  <div class="notification-body">
+    Parabéns, você atingiu o 7º lugar no ranking.
+  </div>
 </div>
