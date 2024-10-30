@@ -3,8 +3,8 @@
         <h1>Perfil do aluno</h1>
         <div class="form-image d-flex gap-5">
             <div class="image-container">
-                <img src="/assets/images/Profile-imageG.svg" alt="">
-                <button class="bi bi-plus-circle btn-overlay"></button>
+                <img src="/assets/images/Profile-imageG.svg" style="margin-top: 30px;" alt="">
+                <button class="bi bi-plus-circle-fill btn-overlay"></button>
             </div>
             <div>
                 <form (ngSubmit)="onSubmit()">
@@ -16,7 +16,6 @@
                     <label for="numeroFixo">RA</label>
                     <input type="number" id="numeroFixo" [(ngModel)]="fixedNumber" name="numeroFixo" class="mb-2"
                         disabled>
-
                 </form>
             </div>
         </div>

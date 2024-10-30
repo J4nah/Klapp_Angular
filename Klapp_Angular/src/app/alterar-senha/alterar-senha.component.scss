@@ -1,7 +1,28 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 .banner-border {
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.3); 
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 8px;
-  }
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+.accordion-item {
+  color: #FFF;
+  background-color: transparent;
+  border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+}
+
+button {
+  background-color: transparent;
+  color: #FFF;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #FFF;
+  background-color: transparent;
+
+}
