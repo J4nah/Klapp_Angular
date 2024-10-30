@@ -1,4 +1,4 @@
-<div class="banner-border border border-2" style="min-height: 553px; min-width: 350px;">
+<div class="banner-border border border-2" style="height: 80vh; width: 350px;">
     <div ngbAccordion>
         <div ngbAccordionItem [collapsed]="false">
             <h2 ngbAccordionHeader>
@@ -7,7 +7,24 @@
             <div ngbAccordionCollapse>
                 <div ngbAccordionBody>
                     <ng-template>
-                       
+
+                        <div class="form-container">
+                            <form (ngSubmit)="onSubmit()" class="d-flex flex-column h-100">
+                              <label for="novaSenha">Digite a nova senha</label>
+                              <input type="text" id="novaSenha" [(ngModel)]="novaSenha" name="novaSenha" class="form-control mb-2" required>
+                          
+                              <label for="repetirSenha">Repita a nova senha</label>
+                              <input type="text" id="repetirSenha" [(ngModel)]="repetirSenha" name="repetirSenha" class="form-control mb-2" required>
+                          
+                              <div class="mt-auto align-self-end">
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                              </div>
+                            </form>
+                          
+                            <div *ngIf="senhaDiferente" class="alert alert-danger mt-2">
+                              As senhas não coincidem.
+                            </div>
+                          </div>
 
 
 
@@ -22,10 +39,14 @@
             <div ngbAccordionCollapse>
                 <div ngbAccordionBody>
                     <ng-template>
-                        
-
-                        
-                    </ng-template>
+                        <div class="d-flex align-items-center gap-2">
+                        <p class="m-0" style="font-weight: bolder;">Mostrar Notificações</p>
+                        <label class="switch">
+                          <input type="checkbox">
+                          <span class="slider"></span>
+                        </label>
+                        </div>
+                      </ng-template>
                 </div>
             </div>
         </div>

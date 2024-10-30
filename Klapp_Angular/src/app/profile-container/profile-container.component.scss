@@ -34,7 +34,7 @@ p {
 
 form {
   min-width: 300px;
-  width: 100%; /* Garante que o formulário ocupe toda a largura */
+  width: 100%; 
   display: flex;
   flex-direction: column;
 }
@@ -55,12 +55,12 @@ input[type="number"] {
 }
 
 .notas-container {
-  margin-bottom: 2rem; /* Espaçamento entre os anos */
+  margin-bottom: 2rem; 
 }
 
 .notas {
   display: flex;
-  gap: 20px; /* Espaçamento entre os inputs */
+  gap: 20px; 
 }
 
 .nota {
@@ -68,30 +68,40 @@ input[type="number"] {
 }
 
 .image-container {
-  position: relative;
+  margin-top: 20px;
+  position: relative; 
+  width: 120px; 
+  height: 120px; 
+  border-radius: 50%; 
+  overflow: visible; 
   display: inline-block;
 }
 
 .image-container img {
   display: block;
-  width: 100%; /* Ajuste conforme necessário */
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 50%; 
 }
 
 .btn-overlay {
-  background-color: #FFF;
   position: absolute;
-  bottom: 25px;
-  right: 5px;
+  bottom: 5px; 
+  right: -10px; 
   background-color: transparent;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
+  border: none; 
+  font-size: 30px; 
+  cursor: pointer; 
+  color: #FFF; 
+ 
 }
 
+
 .btn-primary {
-  height: 35px; /* Maior altura para o botão */
-  width: 70px;
-  margin-top: 20px;
+  height: 30px;
+  width: 60px;
+  margin-top: 10px;
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -100,3 +110,4 @@ input[type="number"] {
   color: #fff;
   font-size: 20px;
 }
+

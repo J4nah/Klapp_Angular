@@ -1,18 +1,14 @@
 .banner-border {
   padding: 10px;
   background: rgba(255, 255, 255, 0.3);
-  /* Fundo semitransparente */
   backdrop-filter: blur(10px);
-  /* Aplica o desfoque */
   -webkit-backdrop-filter: blur(10px);
-  /* Compatibilidade com navegadores WebKit */
   border-radius: 8px;
 }
 
 .accordion-item {
   color: #FFF;
   font-family: "Poppins", sans-serif;
-
   background-color: transparent;
   border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
 }
