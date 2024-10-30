@@ -11,18 +11,23 @@ export class TelaQuizComponent {
   currentQuestionIndex: number = 0;
   totalQuestions: number = 5;
   answers: string[] = [];
-  correctAnswers: string[] = ['Paris', '4', 'Júpiter', 'Machado de Assis', 'H2O'];
+  correctAnswers: string[] = ['Um espaço na memória onde armazenamos temporariamente dados.', 'Operador de atribuição (=).', '5 + 2.', 'Scanner.nextLine().', 'System.out.println("Bem-vindo ao curso!").'];
   score: number = 0;
   showScoreChart: boolean = false;
   selectedOption: string | null = null; // Inicializa selectedOption como null
 
   questions: { question: string; options: string[] }[] = [
-    { question: 'Qual é a capital da França?', options: ['Paris', 'Londres', 'Berlim', 'Roma'] },
-    { question: 'Qual é a soma de 2 + 2?', options: ['3', '4', '5', '6'] },
-    { question: 'Qual é o maior planeta do sistema solar?', options: ['Terra', 'Marte', 'Júpiter', 'Saturno'] },
-    { question: 'Quem escreveu "Dom Casmurro"?', options: ['Machado de Assis', 'Joaquim Manuel de Macedo', 'José de Alencar', 'Eça de Queirós'] },
-    { question: 'Qual é a fórmula química da água?', options: ['H2O', 'CO2', 'O2', 'NaCl'] },
+    { question: 'O que é uma variável em programação Java?', options: ['Um espaço na memória onde armazenamos temporariamente dados.', 'Um programa que processa informações automaticamente.', 'Um dispositivo de entrada de dados.', 'Um tipo de banco de dados usado para armazenar grandes volumes de informação.'] },
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+    { question: 'Qual operador é usado para atribuir um valor a uma variável em Java?', options: ['Operador de adição (+).', 'Operador de subtração (-).', 'Operador de multiplicação (*).', 'Operador de atribuição (=).'] },
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+    { question: 'Qual das alternativas abaixo é uma operação válida de soma em Java?', options: ['"texto" + 10.', '5 + 2.', '"Java" + Programação.', '10 + "5".'] },
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+    { question: 'Qual método é utilizado para capturar a entrada de dados do usuário em Java?', options: ['System.out.print().', 'Scanner.nextLine().', 'input().', 'Eread().'] },
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+    { question: 'Como podemos imprimir a mensagem "Bem-vindo ao curso!" em Java?', options: ['show("Bem-vindo ao curso!").', 'write("Bem-vindo ao curso!").', 'System.out.println("Bem-vindo ao curso!").', 'print("Bem-vindo ao curso!").'] },
   ];
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
 
   constructor(private router: Router) {}
 
