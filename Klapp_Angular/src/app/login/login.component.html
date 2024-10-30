@@ -21,9 +21,18 @@
                         class="form-control mb-3">
                 </div>
                 <div class="form-group d-flex justify-content-between align-items-center mb-3">
-                    <div class="d-flex align-items-center">
-                        <input type="checkbox" id="rememberMe" name="rememberMe" ngModel class="me-2">
-                        <label for="rememberMe" class="check mb-0">Manter conectado</label>
+                    <div class="d-flex m-0" style="height: 23px;">
+                        <div class="checkbox-wrapper-46 d-flex align-items-center me-2"> <!-- 'me-2' para margem à direita -->
+                            <input type="checkbox" id="cbx-46" class="inp-cbx" />
+                            <label for="cbx-46" class="cbx">
+                                <span>
+                                    <svg viewBox="0 0 12 10" height="10px" width="12px">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg>
+                                </span>
+                            </label>
+                        </div>
+                        <label for="cbx-46" class="check m-0">Manter conectado</label> <!-- 'for' do label deve corresponder ao checkbox -->
                     </div>
                     <button type="button" class="btn btn-link btn-rec-senha p-0 align-self-start">Recuperar senha?</button>
                 </div>
