@@ -36,6 +36,7 @@ import { ProfileContainerComponent } from './profile-container/profile-container
 import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
 import { BannerPontuacoesComponent } from './banner-pontuacoes/banner-pontuacoes.component';
 import { TelaQuizComponent } from './tela-quiz/tela-quiz.component';
+import { TotalAcertosComponent } from './total-acertos/total-acertos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,6 +71,7 @@ import { TelaQuizComponent } from './tela-quiz/tela-quiz.component';
     AlterarSenhaComponent,
     BannerPontuacoesComponent,
     TelaQuizComponent,
+    TotalAcertosComponent,
   ],
   imports: [
     BrowserModule,
