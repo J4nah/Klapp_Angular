@@ -41,7 +41,7 @@ describe('LoginComponent', () => {
 
     // Definindo o nome de usuário e senha
     component.username = 'test@example.com';
-    component.password = 'password';
+    component.senha = 'senha';
 
     // Chamar o método onSubmit
     component.onSubmit(mockForm);  

@@ -1,6 +1,7 @@
+// login.component.ts
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,14 +10,13 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent {
   username: string = '';
-  password: string = ''; 
+  senha: string = ''; // Alterado para SENHA
 
-  constructor(private router: Router) {}
+  constructor(private authService: AuthService) {}
 
   onSubmit(form: NgForm) {
     if (form.valid) {
-      // Lógica de login aqui (por exemplo, autenticação)
-      this.router.navigate(['/tela-aluno']);
+      this.authService.login(this.username, this.senha); // Alterado para SENHA
     }
   }
 }

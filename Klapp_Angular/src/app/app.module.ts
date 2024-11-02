@@ -43,6 +43,7 @@ import { MessagesScrollComponent } from './messages-scroll/messages-scroll.compo
 import { MakePublicationComponent } from './make-publication/make-publication.component';
 import { FiltrosDisciplinasComponent } from './filtros-disciplinas/filtros-disciplinas.component';
 import { SupportChatComponent } from './support-chat/support-chat.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -91,7 +92,8 @@ import { SupportChatComponent } from './support-chat/support-chat.component';
     NgbModule,
     FormsModule,
     NgbCarouselModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [
     provideClientHydration()

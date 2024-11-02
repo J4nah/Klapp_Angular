@@ -1,18 +1,27 @@
 import { Component } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-logout-image',
-  templateUrl: './logout-image.component.html',
-  styleUrls: ['./logout-image.component.scss']
+  templateUrl: './logout-image.component.html', // Ajuste para o nome correto do seu arquivo de template
+  styleUrls: ['./logout-image.component.scss'] // Ajuste para o nome correto do seu arquivo de estilo
 })
 export class LogoutImageComponent {
-  notificationVisible = false; // Inicialmente, a notificação está oculta
+  notificationVisible: boolean = false;
 
-  // Função para alternar a visibilidade da notificação ao clicar no ícone de sino
+  constructor(private userService: UserService) {}
+
+  get userName(): string {
+    const user = this.userService.getUser();
+    return user ? user.name : 'Usuário'; // Nome padrão se não houver usuário
+  }
+
   toggleNotification() {
-    this.notificationVisible = true; // Exibe a notificação quando o ícone é clicado
-    setTimeout(() => {
-      this.notificationVisible = false; // Esconde a notificação após 5 segundos
-    }, 5000);
+    this.notificationVisible = !this.notificationVisible;
+  }
+
+  logout() {
+    this.userService.logout(); // Limpa as informações do usuário
+    // Redirecionar para a página de login ou realizar outras ações
   }
 }
