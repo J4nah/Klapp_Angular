@@ -4,3 +4,19 @@
   backdrop-filter: blur(10px); /* Aplica o desfoque */
   -webkit-backdrop-filter: blur(10px); /* Compatibilidade com navegadores WebKit */
 }
+
+.chart-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+#score-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em; /* Ajuste o tamanho conforme necessário */
+  color: #ffffff; /* Cor do texto */
+  font-weight: bold;
+}
