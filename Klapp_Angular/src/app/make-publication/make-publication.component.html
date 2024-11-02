@@ -1,0 +1,40 @@
+<!-- make-publication.component.html -->
+<div class="publication-container banner-border container-fluid">
+    <div class="card bg-blur border-white">
+        <div class="card-header border-white">
+            <h5 class="text-white mb-0">Make Publication</h5>
+        </div>
+        <div class="card-body">
+            <form (ngSubmit)="onSubmit()">
+                <!-- Subject Input and Class Selection in a row -->
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control bg-blur text-white" placeholder="Assunto"
+                            [(ngModel)]="publication.subject" name="subject">
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-select bg-blur text-white" [(ngModel)]="publication.class" name="class">
+                            <option value="" selected>Selecione uma disciplina</option>
+                            <option *ngFor="let class of classes" [value]="class">
+                                {{class}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Message Textarea -->
+                <div class="mb-2">
+                    <textarea class="form-control bg-blur text-white" rows="3" placeholder="Escreva aqui sua mensagem"
+                        [(ngModel)]="publication.message" name="message"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-outline-light">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

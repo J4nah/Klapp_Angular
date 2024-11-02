@@ -28,7 +28,7 @@ export class StudentRadarChartComponent {
         labels: ['Intuitivo', 'Global', 'Verbal', 'Sequencial', 'Visual', 'Sensorial', 'Ativo', 'Reflexivo'],
         datasets: [
           {
-            label: 'Desempenho do Aluno',
+            label: 'Aprendizagem do aluno',
             data: [85, 100, 75, 95, 100, 80, 100, 90],
             borderWidth: 2,
             borderColor: 'darkblue',

@@ -1,0 +1,30 @@
+<div class="chat-overlay" *ngIf="isVisible">
+    <div class="chat-window border rounded shadow">
+      <div class="chat-header d-flex justify-content-between align-items-center p-2">
+        <h5 class="m-0">
+          <i class="bi bi-question-circle"></i> Suporte via chat
+        </h5>
+        <button class="btn-close" (click)="toggleChat()"></button>
+      </div>
+  
+      <div class="chat-messages p-2">
+        <div class="message" *ngFor="let message of messages">
+          <p>{{ message }}</p>
+        </div>
+      </div>
+  
+      <div class="chat-footer d-flex align-items-center p-2">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Digite sua mensagem"
+          [(ngModel)]="newMessage"
+          (keyup.enter)="sendMessage()"
+        />
+        <button class="btn btn-primary ms-2" (click)="sendMessage()">
+          <i class="bi bi-send"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  

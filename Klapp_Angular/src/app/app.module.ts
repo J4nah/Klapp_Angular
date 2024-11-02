@@ -37,6 +37,12 @@ import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
 import { BannerPontuacoesComponent } from './banner-pontuacoes/banner-pontuacoes.component';
 import { TelaQuizComponent } from './tela-quiz/tela-quiz.component';
 import { TotalAcertosComponent } from './total-acertos/total-acertos.component';
+import { StudentForumComponent } from './student-forum/student-forum.component';
+import { ForumComponent } from './forum/forum.component';
+import { MessagesScrollComponent } from './messages-scroll/messages-scroll.component';
+import { MakePublicationComponent } from './make-publication/make-publication.component';
+import { FiltrosDisciplinasComponent } from './filtros-disciplinas/filtros-disciplinas.component';
+import { SupportChatComponent } from './support-chat/support-chat.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,6 +78,12 @@ import { TotalAcertosComponent } from './total-acertos/total-acertos.component';
     BannerPontuacoesComponent,
     TelaQuizComponent,
     TotalAcertosComponent,
+    StudentForumComponent,
+    ForumComponent,
+    MessagesScrollComponent,
+    MakePublicationComponent,
+    FiltrosDisciplinasComponent,
+    SupportChatComponent,
   ],
   imports: [
     BrowserModule,

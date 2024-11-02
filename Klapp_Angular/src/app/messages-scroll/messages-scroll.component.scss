@@ -1,0 +1,51 @@
+/* messages-scroll.component.scss */
+.messages-container {
+    padding: 1rem;
+    background-color: transparent;
+}
+
+.messages-scroll {
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.card {
+    border-width: 2px !important;
+}
+
+/* Custom scrollbar styles */
+.messages-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.messages-scroll::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 3px;
+}
+
+.messages-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+}
+
+.messages-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Add some hover effects to the post cards */
+.post-card .card:hover {
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Override Bootstrap's default card border color */
+.card.bg-transparent {
+    background-color: transparent !important;
+}

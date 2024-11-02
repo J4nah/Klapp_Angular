@@ -1,0 +1,62 @@
+.banner-border {
+    background: rgba(255, 255, 255, 0.3);
+    /* Fundo semitransparente */
+    backdrop-filter: blur(10px);
+    /* Aplica o desfoque */
+    -webkit-backdrop-filter: blur(10px);
+    /* Compatibilidade com navegadores WebKit */
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+}
+
+.filter-container {
+    color: white;
+}
+
+.form-check-input {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+.form-check-input:checked {
+    background-color: #673AB7;
+    border-color: #673AB7;
+}
+
+.btn-primary {
+    background-color: #673AB7;
+    border-color: #673AB7;
+}
+
+.btn-primary:hover {
+    background-color: #5E35B1;
+    border-color: #5E35B1;
+}
+
+.disciplines-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.disciplines-list .form-check .d-flex {
+    background: rgba(255, 255, 255, 0.05); /* Fundo semitransparente */
+    backdrop-filter: blur(10px); /* Aplica o desfoque */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidade com navegadores WebKit */
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
+}
+
+.disciplines-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.disciplines-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.disciplines-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}

@@ -1,0 +1,44 @@
+.chat-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  z-index: 1050;
+}
+
+.chat-window {
+  width: 400px; /* Aumenta a largura do chat */
+  max-height: 600px; /* Aumenta a altura do chat */
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  background-color: #4c00ff;
+  color: white;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+.chat-footer {
+  background-color: #f8f9fa;
+}
+
+.message {
+  margin: 5px 0;
+  padding: 5px 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+}

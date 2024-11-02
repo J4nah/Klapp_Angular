@@ -1,0 +1,26 @@
+<!-- messages-scroll.component.html -->
+<div class="card bg-transparent border-white banner-border">
+    <div class="card-body messages-container">
+      <div class="messages-scroll">
+        <div class="post-card mb-3" *ngFor="let post of posts">
+          <div class="card bg-transparent border-white">
+            <div class="card-header bg-transparent border-white">
+              <div class="d-flex align-items-center">
+                <img [src]="post.authorImage" 
+                     class="rounded-circle profile-pic me-2" 
+                     alt="Profile picture">
+                <div>
+                  <h6 class="mb-0 text-white">{{post.author}}</h6>
+                  <small class="text-white-50">{{post.timestamp | date:'medium'}}</small>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-white">{{post.title}}</h5>
+              <p class="card-text text-white">{{post.content}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
