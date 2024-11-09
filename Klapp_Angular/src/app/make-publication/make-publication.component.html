@@ -2,7 +2,7 @@
 <div class="publication-container banner-border container-fluid">
     <div class="card bg-blur border-white">
         <div class="card-header border-white">
-            <h5 class="text-white mb-0">Make Publication</h5>
+            <h5 class="text-white mb-0">Faça uma Publicação</h5>
         </div>
         <div class="card-body">
             <form (ngSubmit)="onSubmit()">
@@ -24,13 +24,13 @@
 
                 <!-- Message Textarea -->
                 <div class="mb-2">
-                    <textarea class="form-control bg-blur text-white" rows="3" placeholder="Escreva aqui sua mensagem"
+                    <textarea class="form-control bg-blur text-white" rows="2" placeholder="Escreva aqui sua mensagem"
                         [(ngModel)]="publication.message" name="message"></textarea>
                 </div>
 
                 <!-- Submit Button -->
                 <div class="d-flex justify-content-end">
-                    <button type="submit" class="btn btn-outline-light">
+                    <button type="submit" class="btn btn-outline-light mt-4">
                         Enviar
                     </button>
                 </div>
