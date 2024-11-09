@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: 'visao', component: VisaoComponent }, // Rota para "Visão"
   { path: 'avaliacoes', component: AvaliacoesComponent }, // Rota para "Avaliações"
   { path: 'fale-conosco', component: FaleConoscoComponent }, // Rota para "Fale Conosco"
-  // Adicione mais rotas conforme necessário
+  
   {path: 'perfil', component: PerfilComponent}
 ];
 
