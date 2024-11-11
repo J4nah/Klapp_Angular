@@ -16,10 +16,12 @@ import { StudentProgressComponent } from './student-progress/student-progress.co
 import { PerfilComponent } from './perfil/perfil.component';
 import { TelaQuizComponent } from './tela-quiz/tela-quiz.component';
 import { StudentForumComponent } from './student-forum/student-forum.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 const routes: Routes = [
   { path: '', component: LandingCompletaComponent }, // Rota inicial para o componente Principal
   { path: 'login', component: LoginComponent }, // Rota para o Login
+  {path: 'cadastro', component: CadastroComponent}, //Rota de cadastro uou
   { path: 'tela-aluno', component: TelaAlunoComponent }, // Rota para a Tela do Aluno
   { path: 'quem-somos', component: QuemSomosComponent }, // Rota para "Quem Somos"
   { path: 'educacao-para-todos', component: EducacaoParaTodosComponent }, // Rota para "Educação para Todos"

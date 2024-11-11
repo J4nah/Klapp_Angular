@@ -4,14 +4,14 @@
         <div class="form-image d-flex gap-5">
             <div class="image-container">
                 <img [src]="imageSrc" alt="Imagem de Perfil" class="profile-image">
-                
+
                 <!-- Botão para abrir o seletor de arquivos -->
                 <button class="bi bi-plus-circle-fill btn-overlay" (click)="onUploadClick()"></button>
-              
+
                 <!-- Input file oculto -->
                 <input type="file" #fileInput (change)="onFileSelected($event)" accept="image/*" style="display: none;">
-              </div>
-              
+            </div>
+
             <div>
                 <form (ngSubmit)="onSubmit()">
                     <label for="nome">Nome</label>
@@ -19,9 +19,17 @@
 
                     <label for="email">Email</label>
                     <input type="text" id="email" [(ngModel)]="email" name="email" class="mb-2" required>
+
                     <label for="numeroFixo">RA</label>
-                    <input type="number" id="numeroFixo" [(ngModel)]="fixedNumber" name="numeroFixo" class="mb-2"
-                        disabled>
+                    <div class="input-group mb-2">
+                        <input type="number" id="numeroFixo" [(ngModel)]="fixedNumber" name="numeroFixo"
+                            class="form-control" disabled>
+                        <!-- Ícone de informação com tooltip -->
+                        <button type="button" class="btn btn-outline-secondary me-2" placement="end"
+                            ngbTooltip="Para modificar seu RA entre em contato com o suporte ou com seu professor">
+                            <i class="bi bi-info-circle"></i>
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -30,6 +38,7 @@
             <h2>Insira suas notas do ensino médio</h2>
             <p>Preencha os campos abaixo com as suas médias anuais para calcular seu desempenho final.</p>
 
+            <!-- Notas -->
             <form (ngSubmit)="onSubmit()" class="w-100 mb-4">
                 <div class="notas-container">
                     <strong class="m-0">Primeiro ano</strong>
@@ -114,9 +123,6 @@
                     <button type="submit" class="btn btn-primary">Salvar</button>
                 </div>
             </form>
-
-
-
         </div>
     </div>
 </div>

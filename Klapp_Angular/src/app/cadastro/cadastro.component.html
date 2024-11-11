@@ -1,0 +1,146 @@
+<div class="background-container">
+    <div class="form-card">
+        <div class="logo-container row">
+            <!-- Botão de Voltar -->
+            <div *ngIf="step > 1" class="back-button-container">
+                <button type="button" class="btn-back" (click)="goBack()" [disabled]="step === 4">
+                    <!-- Desabilitar o botão se o step for 4 -->
+                    <i class="bi bi-arrow-left h-16px"></i>
+                </button>
+            </div>
+            <!-- <div class="mt-4">
+                <img src="../../assets/images/Logotipo.svg" alt="Klapp Edu" class="logo" />
+            </div> -->
+        </div>
+        <div class="form-content">
+            <!-- Step 1: Seleção de Tipo de Usuário -->
+            <div *ngIf="step === 1">
+                <h2 class="form-title">{{ getStepTitle() }}</h2>
+                <p class="form-subtitle">Para prosseguir, selecione uma opção abaixo</p>
+
+                <div class="user-type-buttons">
+                    <button class="btn-secondary" (click)="selectUser('professor')">
+                        Sou professor
+                    </button>
+                    <button class="btn-primary" (click)="selectUser('aluno')">
+                        Sou aluno
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2: Formulário de Dados -->
+            <div *ngIf="step === 2">
+                <h2 class="form-title">{{ getStepTitle() }}</h2>
+                <p class="form-subtitle">(Preencha as informações abaixo para criar seu perfil)</p>
+
+                <form class="registration-form">
+                    <div class="form-group" [ngClass]="{'has-error': isFormSubmitted && !userData.name}">
+                        <input type="text" class="form-control" [(ngModel)]="userData.name" name="name"
+                            placeholder="Nome Completo" />
+                        <div *ngIf="isFormSubmitted && !userData.name" class="error-message">Campo obrigatório</div>
+                    </div>
+
+                    <div class="form-group" [ngClass]="{'has-error': isFormSubmitted && !userData.email}">
+                        <input type="email" class="form-control" [(ngModel)]="userData.email" name="email"
+                            placeholder="E-mail Institucional" />
+                        <div *ngIf="isFormSubmitted && !userData.email" class="error-message">Campo obrigatório</div>
+                    </div>
+
+                    <!-- Campos específicos para Aluno -->
+                    <ng-container *ngIf="userType === 'aluno'">
+                        <div class="form-group" [ngClass]="{'has-error': isFormSubmitted && !userData.ra}">
+                            <input type="text" class="form-control" [(ngModel)]="userData.ra" name="ra"
+                                placeholder="RA" />
+                            <div *ngIf="isFormSubmitted && !userData.ra" class="error-message">Campo obrigatório</div>
+                        </div>
+
+                        <div class="form-group" [ngClass]="{'has-error': isFormSubmitted && !userData.curso}">
+                            <select class="form-control" [(ngModel)]="userData.curso" name="curso">
+                                <option value="" disabled selected>Curso</option>
+                                <option *ngFor="let curso of cursos" [value]="curso.nome">{{ curso.nome }}</option>
+                            </select>
+                            <div *ngIf="isFormSubmitted && !userData.curso" class="error-message">Campo obrigatório
+                            </div>
+                        </div>
+
+                        <div class="form-group" [ngClass]="{'has-error': isFormSubmitted && !userData.semestre}">
+                            <select class="form-control" [(ngModel)]="userData.semestre" name="semestre">
+                                <option value="" disabled selected>Ano ou Semestre de Ingresso</option>
+                                <option value="2023S1">2023 - 1º Semestre</option>
+                                <option value="2023S2">2023 - 2º Semestre</option>
+                                <option value="2024S1">2024 - 1º Semestre</option>
+                                <option value="2024S2">2024 - 2º Semestre</option>
+                            </select>
+                            <div *ngIf="isFormSubmitted && !userData.semestre" class="error-message">Campo obrigatório
+                            </div>
+                        </div>
+                    </ng-container>
+
+                    <!-- Campos específicos para Professor -->
+                    <ng-container *ngIf="userType === 'professor'">
+                        <div class="form-group" [ngClass]="{'has-error': isFormSubmitted && !userData.titulacao}">
+                            <select class="form-control" [(ngModel)]="userData.titulacao" name="titulacao">
+                                <option value="" disabled selected>Titulação</option>
+                                <option *ngFor="let titulo of titulacoes" [value]="titulo">{{ titulo }}</option>
+                            </select>
+                            <div *ngIf="isFormSubmitted && !userData.titulacao" class="error-message">Campo obrigatório
+                            </div>
+                        </div>
+
+                        <div class="form-group" [ngClass]="{'has-error': isFormSubmitted && !userData.departamento}">
+                            <select class="form-control" [(ngModel)]="userData.departamento" name="departamento">
+                                <option value="" disabled selected>Departamento</option>
+                                <option *ngFor="let dept of departamentos" [value]="dept">{{ dept }}</option>
+                            </select>
+                            <div *ngIf="isFormSubmitted && !userData.departamento" class="error-message">Campo
+                                obrigatório</div>
+                        </div>
+                    </ng-container>
+
+                    <button type="button" class="btn-next" (click)="goToStep(3)">
+                        Próximo
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Step 3: Criação de Senha -->
+            <div *ngIf="step === 3">
+                <h2 class="form-title">{{ getStepTitle() }}</h2>
+                <p class="form-subtitle">Crie uma senha segura para sua conta</p>
+
+                <form class="registration-form">
+                    <div class="form-group" [ngClass]="{'has-error': isPasswordFormSubmitted && !userData.senha}">
+                        <input type="password" class="form-control" [(ngModel)]="userData.senha" name="senha"
+                            placeholder="Digite sua senha" />
+                        <div *ngIf="isPasswordFormSubmitted && !userData.senha" class="error-message">Campo obrigatório
+                        </div>
+                    </div>
+                    <div class="form-group"
+                        [ngClass]="{'has-error': isPasswordFormSubmitted && !userData.confirmSenha}">
+                        <input type="password" class="form-control" [(ngModel)]="userData.confirmSenha"
+                            name="confirmSenha" placeholder="Confirme sua senha" />
+                        <div *ngIf="isPasswordFormSubmitted && !userData.confirmSenha" class="error-message">Campo
+                            obrigatório</div>
+                    </div>
+                    <button type="button" class="btn-next" (click)="submitForm()" [disabled]="isSubmitting">
+                        Finalizar Cadastro
+                        <i class="bi bi-check-lg"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Step 4: Sucesso -->
+            <div *ngIf="step === 4">
+                <h2 class="form-title">{{ getStepTitle() }}</h2>
+                <p class="form-subtitle">Seu cadastro foi concluído com sucesso!</p>
+                <!-- <p class="welcome-message">Bem-vindo(a), {{ userData.name }}!</p> -->
+                <!-- <a routerLink="''">voltar para Home Page</a> -->
+
+                <a routerLink="/" class="btn btn-primary">
+                    voltar para Home Page
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -44,6 +44,7 @@ import { MakePublicationComponent } from './make-publication/make-publication.co
 import { FiltrosDisciplinasComponent } from './filtros-disciplinas/filtros-disciplinas.component';
 import { SupportChatComponent } from './support-chat/support-chat.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CadastroComponent } from './cadastro/cadastro.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,6 +86,7 @@ import { HttpClientModule } from '@angular/common/http';
     MakePublicationComponent,
     FiltrosDisciplinasComponent,
     SupportChatComponent,
+    CadastroComponent,
   ],
   imports: [
     BrowserModule,

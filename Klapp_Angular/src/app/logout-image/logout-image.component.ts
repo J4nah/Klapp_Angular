@@ -13,7 +13,7 @@ export class LogoutImageComponent {
 
   get userName(): string {
     const user = this.userService.getUser();
-    return user ? user.name : 'Usuário'; // Nome padrão se não houver usuário
+    return user ? user.nome : 'Usuário'; // Nome padrão se não houver usuário
   }
 
   toggleNotification() {

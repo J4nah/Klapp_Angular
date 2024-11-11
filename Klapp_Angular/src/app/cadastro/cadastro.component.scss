@@ -1,0 +1,227 @@
+/* Estilos do Card */
+.background-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(138, 234, 253, 1) 0%, rgba(223, 79, 122, 1) 100%);
+    padding: 20px;
+}
+
+.form-card {
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    padding: 30px;
+    width: 65%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.3);
+    /* Fundo semitransparente */
+    backdrop-filter: blur(10px);
+    /* Aplica o desfoque */
+    -webkit-backdrop-filter: blur(10px);
+    /* Compatibilidade com navegadores WebKit */
+}
+
+/* Ajuste para o logo */
+.logo-container {
+    display: flex;
+    justify-content: flex-start; /* Fixar o logo à esquerda */
+    align-items: center; /* Alinhar verticalmente */
+    width: 100%; /* Garantir que o container tenha largura total */
+}
+
+.logo {
+    height: 50px; /* Aumentar o tamanho do logo */
+    margin-right: 10px; /* Adicionar espaçamento à direita do logo */
+}
+
+/* Estilo para o conteúdo do formulário */
+.form-content {
+    text-align: center;
+}
+
+.form-title {
+    color: #1a237e;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.form-subtitle {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.welcome-message {
+    color: #2e7d32;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.user-type-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Formulário de cadastro */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #000000;
+    background: #f5f5f5;
+    transition: border-color 0.2s, background-color 0.2s;
+
+    &:focus {
+        outline: none;
+        border-color: #8EC5FC;
+        background: white;
+    }
+
+    &::placeholder {
+        color: #151515;
+    }
+}
+
+select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+
+    &:invalid {
+        color: #999;
+    }
+}
+
+/* Botões */
+.btn-primary,
+.btn-secondary,
+.btn-next {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: #1a237e;
+    color: white;
+
+    &:hover {
+        background: #283593;
+    }
+}
+
+.btn-secondary {
+    background: #e0e0e0;
+    color: #333;
+
+    &:hover {
+        background: #d5d5d5;
+    }
+}
+
+.btn-next {
+    background: #1a237e;
+    color: white;
+    width: 100%;
+    margin-top: 16px;
+
+    &:hover {
+        background: #283593;
+    }
+
+    i {
+        font-size: 18px;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    .form-card {
+        padding: 20px;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .form-subtitle {
+        font-size: 12px;
+    }
+
+    .form-control {
+        padding: 10px 14px;
+    }
+
+    .user-type-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Adicionando borda vermelha para campos obrigatórios */
+.has-error .form-control {
+    border-color: #d9534f;
+    background-color: #f8d7da;
+}
+
+.error-message {
+    color: #d9534f;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+/* Botão de Voltar */
+.back-button-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.btn-back {
+    background: #e0e0e000;
+    color: white;
+    border-radius: 50%; /* Tornar a borda circular */
+    padding: 8px 12px; /* Diminuir o tamanho do botão */
+    font-size: 16px; /* Diminuir o tamanho da seta */
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white; /* Adicionar borda branca ao botão */
+}
+
+.btn-back:hover {
+    background: #d5d5d5;
+}
+
+.btn-back i {
+    font-size: 18px; /* Ajustar o tamanho do ícone da seta */
+    color: white; /* Tornar a seta branca */
+}

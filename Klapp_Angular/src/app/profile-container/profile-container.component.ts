@@ -1,14 +1,15 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-profile-container',
   templateUrl: './profile-container.component.html',
-  styleUrl: './profile-container.component.scss'
+  styleUrls: ['./profile-container.component.scss']
 })
-export class ProfileContainerComponent {
+export class ProfileContainerComponent implements OnInit {
   nome: string = '';
   email: string = '';
-  fixedNumber: number = 12345; // Número fixo que não pode ser alterado
+  fixedNumber: number = 0;
   imageSrc: string = '/assets/images/Profile-imageG.svg';
 
   // Notas para os três anos
@@ -27,7 +28,22 @@ export class ProfileContainerComponent {
   nota3_3: number | null = null;
   nota4_3: number | null = null;
 
+  constructor(private userService: UserService) {}
+
   @ViewChild('fileInput') fileInput!: ElementRef;
+
+  ngOnInit() {
+    this.populateProfile();
+  }
+
+  populateProfile(): void {
+    const user = this.userService.getUser();
+    if (user) {
+      this.nome = user.nome;
+      this.email = user.email;
+      this.fixedNumber = parseInt(user.ra, 10); // Assumindo que o RA é um número
+    }
+  }
 
   onUploadClick(): void {
     // Aciona o clique no input de arquivo oculto
@@ -48,32 +64,11 @@ export class ProfileContainerComponent {
     }
   }
 
-  onSubmit() {
-    const formData = {
-      nome: this.nome,
-      email: this.email,
-      numeroFixo: this.fixedNumber,
-      notas: {
-        primeiroAno: {
-          nota1: this.nota1,
-          nota2: this.nota2,
-          nota3: this.nota3,
-          nota4: this.nota4
-        },
-        segundoAno: {
-          nota1: this.nota1_2,
-          nota2: this.nota2_2,
-          nota3: this.nota3_2,
-          nota4: this.nota4_2
-        },
-        terceiroAno: {
-          nota1: this.nota1_3,
-          nota2: this.nota2_3,
-          nota3: this.nota3_3,
-          nota4: this.nota4_3
-        }
-      }
-    };
-    console.log(formData);
+  onSubmit(): void {
+    const user = this.userService.getUser();
+    if (user) {
+      // Chamando o método de atualização
+      this.userService.updateUser(user.id, this.nome, this.email);
+    }
   }
 }

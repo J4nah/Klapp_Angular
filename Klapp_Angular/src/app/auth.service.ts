@@ -28,7 +28,7 @@ export class AuthService {
     })
     .then(data => {
       // A lógica de sucesso depende do formato de resposta da API
-      this.userService.setUser(data.user.nome);
+      this.userService.setUser(data.user);
       alert(data.message); // Mostra mensagem de sucesso do login
       this.router.navigate(['/tela-aluno']); // Redireciona para a tela do aluno
     })
