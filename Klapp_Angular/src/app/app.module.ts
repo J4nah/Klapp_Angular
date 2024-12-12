@@ -45,6 +45,7 @@ import { FiltrosDisciplinasComponent } from './filtros-disciplinas/filtros-disci
 import { SupportChatComponent } from './support-chat/support-chat.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { SelectTurmasComponent } from './select-turmas/select-turmas.component';
 @NgModule({ declarations: [
         AppComponent,
         PrincipalComponent,
@@ -86,6 +87,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
         FiltrosDisciplinasComponent,
         SupportChatComponent,
         CadastroComponent,
+        SelectTurmasComponent,
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,

@@ -1,0 +1,155 @@
+<div class="background-container container-fluid">
+  <div class="row" style="gap: 10px">
+    <div class="col-md-2 mt-3">
+      <app-side-menu></app-side-menu>
+    </div>
+
+    <div class="col-md-7 mt-3">
+      <app-banner-top></app-banner-top>
+
+      <!-- Contêiner principal -->
+      <div class="banner-border">
+        <!-- Título -->
+        <h3 class="banner-title">Turmas</h3>
+
+        <!-- Blocos de turmas -->
+        <div class="turmas-container">
+          <!-- Bloco 1 -->
+          <a href="#" target="_blank" class="no-underline">
+            <button class="turma-card">
+              <p class="turma-title">
+                <img src="assets/images/Users-icon.svg" alt="" class="turma-icon1">
+                Turma</p>
+              <p class="descricao">Engenharia de Software<br>AS4051SN1</p>
+              <p class="turma-title">
+                <img src="assets/images/Class-icon.svg" alt="" class="turma-icon1">
+                Sala</p>
+              <p class="descricao">Sala 203 A</p>
+            </button>
+          </a>
+
+          <!-- Bloco 2 -->
+          <a href="#" target="_blank" class="no-underline">
+            <button class="turma-card">
+              <p class="turma-title">
+                <img src="assets/images/Users-icon.svg" alt="" class="turma-icon1">
+                Turma</p>
+              <p class="descricao">Engenharia de Software<br>AS4051SN2</p>
+              <p class="turma-title">
+                <img src="assets/images/Class-icon.svg" alt="" class="turma-icon1">
+                Sala</p>
+              <p class="descricao">Sala 204 A</p>
+            </button>
+          </a>
+
+          <!-- Bloco 3 -->
+          <a href="#" target="_blank" class="no-underline">
+            <button class="turma-card">
+              <p class="turma-title">
+                <img src="assets/images/Users-icon.svg" alt="" class="turma-icon1">
+                Turma</p>
+              <p class="descricao">Engenharia de Software<br>AS4051SN3</p>
+              <p class="turma-title">
+                <img src="assets/images/Class-icon.svg" alt="" class="turma-icon1">
+                Sala</p>
+              <p class="descricao">Sala 205 A</p>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-2 mt-3">
+      <app-logout-image></app-logout-image>
+    </div>
+  </div>
+</div>
+
+<style>
+/* CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background-container {
+  background-image: url('/assets/images/Background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh; /* Usando 100vh para ocupar toda a altura da tela */
+}
+
+.banner-border {
+  padding: 3vh 2vw; /* Ajuste de padding em vh e vw para responsividade */
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.599); /* Mantendo a borda */
+  height: 78vh; /* Usando vh para ajustar o tamanho do banner */
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-title {
+  margin: 0 2vw 2vh; /* Ajustando a margem do título */
+  color: white;
+}
+
+.turmas-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vh; /* Ajuste de espaçamento entre os blocos */
+  margin: 0 2vw;
+}
+
+.turma-card {
+  width: 20vw; /* Usando vw para a largura para maior responsividade */
+  height: 25vh; /* Usando vh para a altura */
+  border: 3px solid white;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 2vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinhando o conteúdo no topo */
+  align-items: flex-start; /* Alinhando o conteúdo à esquerda */
+  gap: 1vh; /* Ajustando o espaço entre os itens */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.turma-card:hover {
+  background-color: #191D6B40;
+  border-color: #191D6B80;
+}
+
+.turma-title {
+  font-weight: bold;
+  font-size: 2.5vh; /* Ajustando o tamanho da fonte para usar vh */
+  margin-bottom: 1vh; /* Ajuste no espaçamento */
+  text-align: left; /* Garantindo alinhamento à esquerda */
+}
+
+.turma-card p {
+  margin: 0; /* Remove o espaço entre os parágrafos */
+  text-align: left; /* Garantindo que os textos dentro do .turma-card fiquem alinhados à esquerda */
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.descricao {
+  font-size: 2vh; /* Ajustando a descrição para usar vh */
+}
+
+.turma-icon1, img{
+  background-image: url('/Klapp_Angular/src/assets/images/Users-icon.svg');
+}
+</style>

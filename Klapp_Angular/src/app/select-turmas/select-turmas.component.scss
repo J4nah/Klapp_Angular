@@ -1,0 +1,76 @@
+
+
+.banner-border {
+  width: 173vh;
+  height: 78vh;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background-container {
+  background-image: url('/assets/images/Background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.banner-border {
+  padding: 2vh;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1vh;
+  border: 0.2vh solid rgba(255, 255, 255, 0.599);
+  height: calc(100vh - 15vh);
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-title {
+  margin: 0 2vh 2vh;
+  color: white;
+}
+
+.turmas-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vh;
+  margin: 0 2vh;
+}
+
+.turma-card {
+  width: 18vh;
+  height: 13.5vh;
+  border: 0.3vh solid white;
+  border-radius: 1vh;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 1vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.turma-card:hover {
+  background-color: #191D6B40;
+  border-color: #191D6B80;
+}
+
+.turma-title {
+  font-weight: bold;
+  font-size: 1.6vh;
+}
