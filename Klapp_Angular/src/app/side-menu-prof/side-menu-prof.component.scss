@@ -1,0 +1,12 @@
+.blurred-background {
+    height: 92vh;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+}
+
+.link-icons a {
+    color: white !important;
+    font-family: "Poppins", sans-serif;
+}

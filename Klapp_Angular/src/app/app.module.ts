@@ -48,6 +48,11 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { SelectTurmasComponent } from './select-turmas/select-turmas.component';
 import { TurmaTableComponent } from './turma-table/turma-table.component';
 import { ProgressoTurmaComponent } from './progresso-turma/progresso-turma.component';
+import { SideMenuProfComponent } from './side-menu-prof/side-menu-prof.component';
+import { PerfilProfComponent } from './perfil-prof/perfil-prof.component';
+import { ProfileContainerProfComponent } from './profile-container-prof/profile-container-prof.component';
+import { QuizProfComponent } from './quiz-prof/quiz-prof.component';
+import { ForumProfComponent } from './forum-prof/forum-prof.component';
 @NgModule({ declarations: [
         AppComponent,
         PrincipalComponent,
@@ -92,6 +97,11 @@ import { ProgressoTurmaComponent } from './progresso-turma/progresso-turma.compo
         SelectTurmasComponent,
         TurmaTableComponent,
         ProgressoTurmaComponent,
+        SideMenuProfComponent,
+        PerfilProfComponent,
+        ProfileContainerProfComponent,
+        QuizProfComponent,
+        ForumProfComponent,
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,

@@ -19,6 +19,9 @@ import { StudentForumComponent } from './student-forum/student-forum.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { SelectTurmasComponent } from './select-turmas/select-turmas.component';
 import { ProgressoTurmaComponent } from './progresso-turma/progresso-turma.component';
+import { PerfilProfComponent } from './perfil-prof/perfil-prof.component';
+import { QuizProfComponent } from './quiz-prof/quiz-prof.component';
+import { ForumProfComponent } from './forum-prof/forum-prof.component';
 
 const routes: Routes = [
   { path: '', component: LandingCompletaComponent }, // Rota inicial para o componente Principal
@@ -39,7 +42,10 @@ const routes: Routes = [
   { path: 'fale-conosco', component: FaleConoscoComponent }, // Rota para "Fale Conosco"
   // Adicione mais rotas conforme necessário
   {path: 'perfil', component: PerfilComponent},
-  { path: 'select-turmas', component: SelectTurmasComponent }
+  { path: 'select-turmas', component: SelectTurmasComponent },
+  { path: 'perfil-prof', component: PerfilProfComponent}, 
+  { path: 'quiz-prof', component: QuizProfComponent},
+  { path: 'forum-prof', component: ForumProfComponent},
 ];
 
 @NgModule({

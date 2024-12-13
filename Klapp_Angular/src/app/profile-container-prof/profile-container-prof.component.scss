@@ -1,0 +1,103 @@
+* {
+    color: #FFF;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .form-container,
+  input,
+  button {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  h1 {
+    font-size: 25px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 15px;
+  }
+  
+  .banner-border {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  form {
+    min-width: 300px;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+  
+  label {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    margin: 0;
+    color: #FFF;
+    height: 25px;
+    border-radius: 8px;
+    background-color: transparent;
+    font-size: 16px;
+  }
+  
+ 
+
+  .image-container {
+    margin-top: 20px;
+    position: relative; 
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    overflow: visible; 
+    display: inline-block;
+  }
+  
+  .image-container img {
+    display: block;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 50%; 
+  }
+  
+  .btn-overlay {
+    position: absolute;
+    bottom: 5px; 
+    right: -10px; 
+    background-color: transparent;
+    border: none; 
+    font-size: 30px; 
+    cursor: pointer; 
+    color: #FFF; 
+   
+  }
+  
+  
+  .btn-primary {
+    height: 30px;
+    width: 60px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: solid 2px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  

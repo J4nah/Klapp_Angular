@@ -1,0 +1,45 @@
+<div class="container banner-border border border-2" style="border-radius: 8px; height: 80vh;">
+    <div class="foto-dados m-2 ms-5">
+        <h1>Perfil do professor</h1>
+        <div class="form-image d-flex gap-5">
+            <div class="image-container">
+                <img [src]="imageSrc" alt="Imagem de Perfil" class="profile-image">
+
+                <!-- Botão para abrir o seletor de arquivos -->
+                <button class="bi bi-plus-circle-fill btn-overlay" (click)="onUploadClick()"></button>
+
+                <!-- Input file oculto -->
+                <input type="file" #fileInput (change)="onFileSelected($event)" accept="image/*" style="display: none;">
+            </div>
+
+            <div>
+                <form (ngSubmit)="onSubmit()">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" [(ngModel)]="nome" name="nome" class="mb-2 p-2" required>
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" [(ngModel)]="email" name="email" class="mb-2" required>
+
+                    <label for="numeroFixo">ID Professor</label>
+                    <div class="input-group mb-2">
+                        <input type="number" id="numeroFixo" [(ngModel)]="fixedNumber" name="numeroFixo"
+                            class="form-control" disabled>
+                        <!-- Ícone de informação com tooltip -->
+                        <button type="button" class="btn btn-outline-secondary me-2" placement="end"
+                            ngbTooltip="Para modificar seu RA entre em contato com o suporte ou com seu professor">
+                            <i class="bi bi-info-circle"></i>
+                        </button>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+            </div>
+            
+            
+            
+            
+        </div>
+              
+            
+    </div>   
+   
+</div>
