@@ -18,6 +18,7 @@ import { TelaQuizComponent } from './tela-quiz/tela-quiz.component';
 import { StudentForumComponent } from './student-forum/student-forum.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { SelectTurmasComponent } from './select-turmas/select-turmas.component';
+import { ProgressoTurmaComponent } from './progresso-turma/progresso-turma.component';
 
 const routes: Routes = [
   { path: '', component: LandingCompletaComponent }, // Rota inicial para o componente Principal
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'educacao-para-todos', component: EducacaoParaTodosComponent }, // Rota para "Educação para Todos"
   {path: 'studentQuizzes01', component: StudentQuizzes01Component}, // BIGEUS: rota de mesmo nome no figma
   {path: 'forum', component: StudentForumComponent},
+  {path: 'progresso-turma', component: ProgressoTurmaComponent},
   {path :'tela-quiz', component: TelaQuizComponent},
   {path: 'student-progress', component: StudentProgressComponent}, // BIGEUS: rota de mesmo nome no figma tbm kkkkkk chega de ler aq ou
   { path: 'como-funciona', component: ComoFuncionaComponent }, // Rota para "Como Funciona"

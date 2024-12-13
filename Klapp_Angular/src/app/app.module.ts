@@ -46,6 +46,8 @@ import { SupportChatComponent } from './support-chat/support-chat.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { SelectTurmasComponent } from './select-turmas/select-turmas.component';
+import { TurmaTableComponent } from './turma-table/turma-table.component';
+import { ProgressoTurmaComponent } from './progresso-turma/progresso-turma.component';
 @NgModule({ declarations: [
         AppComponent,
         PrincipalComponent,
@@ -88,6 +90,8 @@ import { SelectTurmasComponent } from './select-turmas/select-turmas.component';
         SupportChatComponent,
         CadastroComponent,
         SelectTurmasComponent,
+        TurmaTableComponent,
+        ProgressoTurmaComponent,
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,

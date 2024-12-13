@@ -1,0 +1,60 @@
+<!-- messages-scroll.component.html -->
+<div class="card border-white banner-border">
+    <h3 class="ms-2 mb-2 text-white">Turma AS405TSN1</h3>
+    <table class="table table-striped banner-border">
+        <thead>
+            <tr class="bg-transparent">
+                <th scope="col">Nome</th>
+                <th scope="col">Ra</th>
+                <th scope="col">Pontos Semana 1</th>
+                <th scope="col">Pontos Semana 2</th>
+                <th scope="col">Pontos Semana 3</th>
+                <th scope="col">Pontos Semana 4</th>
+                <th scope="col">Pontos Semana 5</th>
+                <th scope="col">Pontos Semana 6</th>
+                <th scope="col">Pontos Semana 7</th>
+                <th scope="col">Pontos Semana 8</th>
+            </tr>
+        </thead>
+        <tbody class="bg-transparent">
+            @for (aluno of alunos; track aluno.Nome; let i = $index) {
+            <tr>
+                <td>
+                    {{aluno.Nome}}
+                </td>
+                <td>
+                    {{aluno.RA}}
+                </td>
+                <td>
+                    {{aluno.PontosSemana1}}
+                </td>
+                <td>
+                    {{aluno.PontosSemana2}}
+                </td>
+                <td>
+                    {{aluno.PontosSemana3}}
+                </td>
+                <td>
+                    {{aluno.PontosSemana4}}
+                </td>
+                <td>
+                    {{aluno.PontosSemana5}}
+                </td>
+                <td>
+                    {{aluno.PontosSemana6}}
+                </td>
+                <td>
+                    {{aluno.PontosSemana7}}
+                </td>
+                <td>
+                    {{aluno.PontosSemana8}}
+                </td>
+                <td>
+                    {{aluno.Media}}
+                </td>
+
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
