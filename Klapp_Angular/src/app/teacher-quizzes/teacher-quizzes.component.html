@@ -1,0 +1,117 @@
+<div class="container banner-border border border-2 p-0 container-fluid m-0 "
+style="border-radius: 8px; height: 80vh;">
+   
+    <div class="row justify-content-center m-0 justify-content-end p-0">
+        <div class="banner-criateQuiz">
+            <h1 class="mb-2" style="color: white;">Crie seu quiz agora</h1>
+           <div class="selection">
+  <div class="row">
+    <!-- Primeira linha com dois dropdowns -->
+    <div class="col-6 mb-3 d-flex align-items-center">
+      <div ngbDropdown class="d-inline-block w-100 border-white border-2 rounded-3">
+        <button type="button" class="btn btn-outline-primary text-white w-100" ngbDropdownToggle>
+          {{ selectedDiscipline || 'Selecionar a disciplina' }}
+        </button>
+        <div ngbDropdownMenu class="dropdown-menu-custom w-100">
+          <button ngbDropdownItem class="text-white w-100" (click)="selectDiscipline('Arquitetura de Computadores')">Arquitetura de Computadores</button>
+          <button ngbDropdownItem class="text-white w-100" (click)="selectDiscipline('Construção de Algoritmos')">Construção de Algoritmos</button>
+          <button ngbDropdownItem class="text-white w-100" (click)="selectDiscipline('Fundamentos de Ciências Exatas')">Fundamentos de Ciências Exatas</button>
+          <button ngbDropdownItem class="text-white w-100" (click)="selectDiscipline('Fundamentos de Sistemas de Informação')">Fundamentos de Sistemas de Informação</button>
+          <button ngbDropdownItem class="text-white w-100" (click)="selectDiscipline('Sustentabilidade e Meio Ambiente')">Sustentabilidade e Meio Ambiente</button>
+          <button ngbDropdownItem class="text-white w-100" (click)="selectDiscipline('UPX - Usina de Projetos Experimentais I')">UPX - Usina de Projetos Experimentais I</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 mb-2">
+      <div ngbDropdown class="d-inline-block w-100 border-white border-2 rounded-3">
+        <button type="button" class="btn btn-outline-primary text-white w-100" ngbDropdownToggle>
+          {{ selectedClass || 'Selecionar a Turma' }}
+        </button>
+        <div ngbDropdownMenu class="dropdown-menu-custom w-100">
+          <button ngbDropdownItem class="text-white w-100" (click)="selectClass('Turma 1')">Turma 1</button>
+          <button ngbDropdownItem class="text-white w-100" (click)="selectClass('Turma 2')">Turma 2</button>
+          <button ngbDropdownItem class="text-white w-100" (click)="selectClass('Turma 3')">Turma 3</button>
+          <button ngbDropdownItem class="text-white w-100" (click)="selectClass('Turma 4')">Turma 4</button>
+          <button ngbDropdownItem class="text-white w-100" (click)="selectClass('Turma 5')">Turma 5</button>
+          <button ngbDropdownItem class="text-white w-100" (click)="selectClass('Turma 6')">Turma 6</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Segunda linha com o campo de prazo e formulário -->
+  <div class="row">
+    <div class="col-6 mb-3">
+      <div ngbDropdown class="d-inline-block w-100 border-white border-2 rounded-3">
+        <button type="button" class="btn btn-outline-primary text-white w-100" ngbDropdownToggle>
+          {{ selectedDuration || 'Selecionar o prazo do quiz' }}
+        </button>
+        <div ngbDropdownMenu class="dropdown-menu-custom w-100">
+          <button ngbDropdownItem class="text-white w-100" (click)="selectDuration('1 semana')">1 semana</button>
+          <button ngbDropdownItem class="text-white w-100" (click)="selectDuration('2 semanas')">2 semanas</button>
+          <button ngbDropdownItem class="text-white w-100" (click)="selectDuration('3 semanas')">3 semanas</button>
+          <button ngbDropdownItem class="text-white w-100" (click)="selectDuration('4 semanas')">4 semanas</button>
+          <button ngbDropdownItem class="text-white w-100" (click)="selectDuration('5 semanas')">5 semanas</button>
+          <button ngbDropdownItem class="text-white w-100" (click)="selectDuration('6 semanas')">6 semanas</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 mb-3">
+        <form class="w-100 border-white border-2 rounded-3 p-2">
+        <input type="text" class="form-control" placeholder="Digite o nome do quiz aqui" />
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="create-question border border-2" style="border-radius: 8px;">
+    <form>
+      <!-- Campo para a pergunta -->
+      <div class="m-3">
+       <input type="text" class="form-control" id="question" placeholder="Digite a pergunta aqui">
+      </div>
+  
+      <!-- Opções de resposta -->
+      <div class="m-3">
+        
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="correctOption" id="option1">
+          <input type="text" class="form-control d-inline-block w-75" id="option1Text" placeholder="Opção 1">
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="correctOption" id="option2">
+          <input type="text" class="form-control d-inline-block w-75" id="option2Text" placeholder="Opção 2">
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="correctOption" id="option3">
+          <input type="text" class="form-control d-inline-block w-75" id="option3Text" placeholder="Opção 3">
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="correctOption" id="option4">
+          <input type="text" class="form-control d-inline-block w-75" id="option4Text" placeholder="Opção 4">
+        </div>
+      </div>
+  
+      <!-- Botão de enviar -->
+      <div class="text-end m-3">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </form>
+  </div>
+  <div class="text-end m-3">
+    <button type="submit" class="btn btn-primary">Salvar</button>
+  </div>
+  
+              
+        </div>
+    </div>
+    
+
+ 
+    
+
+
+   
+

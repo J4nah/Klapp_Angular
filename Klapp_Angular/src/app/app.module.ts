@@ -54,6 +54,8 @@ import { ProfileContainerProfComponent } from './profile-container-prof/profile-
 import { QuizProfComponent } from './quiz-prof/quiz-prof.component';
 import { ForumProfComponent } from './forum-prof/forum-prof.component';
 import { GraficoMediaAlunosComponent } from './grafico-media-alunos/grafico-media-alunos.component';
+import { TeacherQuizzesComponent } from './teacher-quizzes/teacher-quizzes.component';
+import { SideRightQuizComponent } from './side-right-quiz/side-right-quiz.component';
 @NgModule({ declarations: [
         AppComponent,
         PrincipalComponent,
@@ -104,6 +106,8 @@ import { GraficoMediaAlunosComponent } from './grafico-media-alunos/grafico-medi
         QuizProfComponent,
         ForumProfComponent,
         GraficoMediaAlunosComponent,
+        TeacherQuizzesComponent,
+        SideRightQuizComponent,
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,

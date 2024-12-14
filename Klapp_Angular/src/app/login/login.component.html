@@ -9,17 +9,33 @@
 
         <div class="col-lg-7 col-md-5 d-flex flex-column align-items-center justify-content-end">
             <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm" class="w-75">
-
                 <h1 class="text-center mb-4">Olá, vamos começar?</h1>
-                <div class="form-group">
+        
+                <div class="form-group mb-0">
                     <input type="text" id="username" name="username" ngModel required placeholder="Entre com seu e-mail"
-                        class="form-control mb-3" [(ngModel)]="username">
+                        class="form-control mb-2" [(ngModel)]="username">
                 </div>
-                <div class="form-group">
+        
+                <div class="form-group mb-1">
                     <input type="password" id="senha" name="senha" ngModel required placeholder="Senha"
-                        class="form-control mb-3" [(ngModel)]="senha"> <!-- Alterado para SENHA -->
+                        class="form-control mb-2" [(ngModel)]="senha"> <!-- Alterado para SENHA -->
                 </div>
-                <div class="form-group d-flex justify-content-between align-items-center mb-3">
+        
+                <div class="form-group mb-0">
+                    <div class="d-flex justify-content-center gap-5 align-items-center">
+                        <div class="form-check d-flex align-items-center">
+                            <input class="form-check-input" type="radio" id="professor" name="role" [(ngModel)]="role" value="professor" required>
+                            <label class="form-check-label text-white ms-2" for="professor">Professor</label>
+                        </div>
+                        <div class="form-check d-flex align-items-center">
+                            <input class="form-check-input" type="radio" id="aluno" name="role" [(ngModel)]="role" value="aluno" required>
+                            <label class="form-check-label text-white ms-2" for="aluno">Aluno</label>
+                        </div>
+                    </div>
+                </div>
+                
+                       
+                <div class="form-group d-flex justify-content-between align-items-center mb-2">
                     <div class="d-flex m-0" style="height: 23px;">
                         <div class="checkbox-wrapper-46 d-flex align-items-center me-2">
                             <input type="checkbox" id="cbx-46" class="inp-cbx" />
@@ -35,12 +51,14 @@
                     </div>
                     <button type="button" class="btn btn-link btn-rec-senha p-0 align-self-start">Recuperar senha?</button>
                 </div>
-                <button type="submit" class="btn btn-primary w-100 mb-3">Fazer Login</button>
-
+        
+                <button type="submit" class="btn btn-primary w-100 mb-2">Fazer Login</button>
+        
                 <div class="container-traco text-center my-4">
                     <span class="text">Ou continue com</span>
                 </div>
-                <div class="redes-sociais d-flex justify-content-center mb-4">
+        
+                <div class="redes-sociais d-flex justify-content-center mb-2">
                     <button class="btn btn-outline-secondary mx-2">
                         <img src="/assets/images/Google.svg" alt="Google" class="img-sociais">
                     </button>
@@ -51,11 +69,13 @@
                         <img src="/assets/images/FACEBOOK.svg" alt="Facebook" class="img-sociais">
                     </button>
                 </div>
+        
                 <div class="container-cadastrar text-center">
                     <span class="text">Não tem conta?</span>
                     <button [routerLink]="'cadastro'" type="button" class="btn btn-link btn-cadastrar">Crie uma conta agora</button>
                 </div>
             </form>
         </div>
+        
     </div>
 </div>
