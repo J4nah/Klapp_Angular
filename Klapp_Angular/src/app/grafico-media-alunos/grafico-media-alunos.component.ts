@@ -1,18 +1,14 @@
-import { DecimalPipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Chart, registerables } from 'chart.js';
+import { isPlatformBrowser } from '@angular/common';  // Importando para verificar se está no navegador
+
+Chart.register(...registerables);
 
 interface Aluno {
-	Nome: string;
-	RA: number;
-	PontosSemana1: number;
-	PontosSemana2: number;
-	PontosSemana3: number;
-	PontosSemana4: number;
-	PontosSemana5: number;
-	PontosSemana6: number;
-	PontosSemana7: number;
-	PontosSemana8: number;
-	Media: number
+  Nome: string;
+  RA: number;
+  Media: number;
+  [key: string]: number | string;  // Allow dynamic properties
 }
 
 const ALUNOS: Aluno[] = [
@@ -201,32 +197,90 @@ const ALUNOS: Aluno[] = [
 ]
 
 @Component({
-	selector: 'app-turma-table',
-	templateUrl: './turma-table.component.html',
-	styleUrl: './turma-table.component.scss'
+  selector: 'app-grafico-media-alunos',
+  templateUrl: './grafico-media-alunos.component.html',
+  styleUrls: ['./grafico-media-alunos.component.scss']
 })
-export class TurmaTableComponent {
-	alunos = ALUNOS;
+export class GraficoMediaAlunosComponent implements OnInit {
+  @ViewChild('canvas', { static: true }) canvasRef: ElementRef<HTMLCanvasElement> | undefined;
+  chart: any;
 
-	// Pagination properties
-	currentPage = 1;
-	itemsPerPage = 7;
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-	// Method to get paginated students
-	get paginatedAlunos(): Aluno[] {
-		const startIndex = (this.currentPage - 1) * this.itemsPerPage;
-		return this.alunos.slice(startIndex, startIndex + this.itemsPerPage);
-	}
+  ngOnInit() {
+    // Verifique se estamos no navegador antes de manipular o canvas
+    if (isPlatformBrowser(this.platformId)) {
+      const canvas = this.canvasRef?.nativeElement;
+      const ctx = canvas?.getContext('2d');
 
-	// Method to calculate total pages
-	get totalPages(): number {
-		return Math.ceil(this.alunos.length / this.itemsPerPage);
-	}
+      if (ctx) {
+        // Criar o gradiente para o gráfico
+        const gradient = ctx.createLinearGradient(0, 0, 0, canvas!.height * 1.5);
+        gradient.addColorStop(0, 'rgba(0, 0, 139, 0.8)');
+        gradient.addColorStop(0.7, 'rgba(0, 0, 139, 0.3)');
+        gradient.addColorStop(1, 'rgba(0, 0, 139, 0)');
 
-	// Method to change page
-	changePage(pageNumber: number) {
-		if (pageNumber >= 1 && pageNumber <= this.totalPages) {
-			this.currentPage = pageNumber;
-		}
-	}
+        // Calcular as médias semanais
+        const weeklyAverages = this.calculateWeeklyAverages(ALUNOS);
+
+        // Criar o gráfico
+        this.chart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5', 'Semana 6', 'Semana 7', 'Semana 8'],
+            datasets: [
+              {
+                label: 'Média Semanal',
+                data: weeklyAverages,
+                borderWidth: 2,
+                borderColor: 'darkblue',
+                backgroundColor: gradient,
+                fill: true
+              }
+            ]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  color: 'white'
+                },
+                grid: {
+                  color: 'white'
+                }
+              },
+              x: {
+                ticks: {
+                  color: 'white'
+                },
+                grid: {
+                  display: false
+                }
+              }
+            },
+            plugins: {
+              legend: {
+                labels: {
+                  color: 'white'
+                }
+              }
+            }
+          }
+        });
+      }
+    }
+  }
+
+  calculateWeeklyAverages(alunos: Aluno[]): number[] {
+    const weeklyAverages = [];
+
+    for (let i = 0; i < 8; i++) {
+      const weekPoints = alunos.map(aluno => Number(aluno[`PontosSemana${i + 1}`]));
+      const weekAverage = weekPoints.reduce((sum, points) => sum + points, 0) / alunos.length;
+      weeklyAverages.push(weekAverage);
+    }
+
+    return weeklyAverages;
+  }
 }

@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background-container {
+    background-image: url('/assets/images/Background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+button {
+    height: 35px;
+    /* Maior altura para o botão */
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: solid 2px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+
+    /* Centralização do texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,6 +1,55 @@
 .banner-border {
+    border-color: #ffffff !important;
+}
+
+.table {
+    background-color: transparent;
+
+    thead {
+        background-color: #007bff;
+        color: white;
+    }
+
+    tbody tr:hover {
+        background-color: #5e35b147;
+    }
+}
+
+.pagination {
+    .page-item {
+        &.active .page-link {
+            background-color: #5E35B1;
+            border-color: #5E35B1;
+            color: white;  // Para garantir que o texto da página ativa tenha contraste adequado
+        }
+
+        &.border .page-link {
+            border: 1px solid #9b33f6;
+        }
+
+        .page-link {
+            color: #ffffff;
+            background-color: transparent;
+            border: 1px solid #ffffff;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s, border-color 0.3s;
+            
+            &:hover {
+                background-color: #5e35b100;
+                border-color: #5e35b1;
+                color: white;  // Para garantir o contraste correto ao passar o mouse
+            }
+        }
+    }
+}
+
+.blurred-background {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: solid 2px;
+}
+
+td, th {
+    background-color: transparent;
+    color: white;
 }

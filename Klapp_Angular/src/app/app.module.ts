@@ -53,6 +53,7 @@ import { PerfilProfComponent } from './perfil-prof/perfil-prof.component';
 import { ProfileContainerProfComponent } from './profile-container-prof/profile-container-prof.component';
 import { QuizProfComponent } from './quiz-prof/quiz-prof.component';
 import { ForumProfComponent } from './forum-prof/forum-prof.component';
+import { GraficoMediaAlunosComponent } from './grafico-media-alunos/grafico-media-alunos.component';
 @NgModule({ declarations: [
         AppComponent,
         PrincipalComponent,
@@ -102,6 +103,7 @@ import { ForumProfComponent } from './forum-prof/forum-prof.component';
         ProfileContainerProfComponent,
         QuizProfComponent,
         ForumProfComponent,
+        GraficoMediaAlunosComponent,
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,
