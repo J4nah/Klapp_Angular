@@ -30,7 +30,8 @@ export class AuthService {
       // A lógica de sucesso depende do formato de resposta da API
       this.userService.setUser(data.user);
       alert(data.message); // Mostra mensagem de sucesso do login
-      this.router.navigate(['/tela-aluno']); // Redireciona para a tela do aluno
+      /* this.router.navigate(['/tela-aluno']); // Redireciona para a tela do aluno */
+      return true;
     })
     .catch(error => {
       console.error('Erro ao fazer login:', error);
